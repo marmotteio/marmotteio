@@ -17,10 +17,9 @@ Marmotte is built with the following technologies:
 
 - [Laravel 10](https://laravel.com): A robust framework for web artisans.
 - [Filament 3](https://filamentadmin.com): A powerful admin panel for Laravel.
-- [PHP 8.2](https://www.php.net): A popular general-purpose scripting language that is especially suited to web development.
+- [PHP 8.3](https://www.php.net): A popular general-purpose scripting language that is especially suited to web development.
 - [MySQL](https://www.mysql.com): The world's most popular open-source relational database.
 - [Redis](https://redis.io): An open-source, in-memory data structure store, used as a database, cache, and message broker.
-- [Meilisearch](https://www.meilisearch.com): An open-source, instant, and relevant search engine.
 
 Additional PHP packages used in Marmotte:
 
@@ -37,7 +36,6 @@ Additional PHP packages used in Marmotte:
 - [rackbeat/laravel-ui-avatars](https://github.com/rackbeat/laravel-ui-avatars): Generate avatars on the fly in Laravel.
 - [spatie/laravel-backup](https://github.com/spatie/laravel-backup): A package to backup your Laravel app.
 - [spatie/laravel-discord-alerts](https://github.com/spatie/laravel-discord-alerts): Send alerts to Discord from a Laravel app.
-- [stancl/tenancy](https://github.com/stancl/tenancy): Automatic multi-tenancy for your Laravel app.
 
 Development dependencies include tools such as PHPUnit for testing, Laravel Sail for managing the Docker environment, and Faker for generating fake data.
 
