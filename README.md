@@ -1,4 +1,4 @@
-![Marmotte](https://raw.githubusercontent.com/supervise/supervise/main/public/readme.png)
+![Marmotte](https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/readme.png)
 
 Marmotte is an open-source IT asset management system built with Laravel, Filament, PHP, and MySQL. It's designed to help you keep track of all your IT resources in your business environment.
 
@@ -51,7 +51,7 @@ Before installing Marmotte, please make sure that no other web servers or databa
 
 1. **Clone this repository to your local machine.**
     ```
-    git clone https://github.com/supervise/supervisegit
+    git clone https://github.com/marmotteio/marmotteiogit
     ```
 
 2. **Navigate to the project directory.**
@@ -71,7 +71,7 @@ Before installing Marmotte, please make sure that no other web servers or databa
 
     Sail publishes various services on standard ports on your system. For example, Laravel is accessible on port `80`. Therefore, you may access the project in your web browser at: `http://localhost`.
 
-4. **Visit `localhost` in your browser to access Supervise.**
+4. **Visit `localhost` in your browser to access Marmotte.**
 
    After the Docker containers are running, navigate to `http://localhost` in your web browser. You should see the Marmotte application running.
 
@@ -88,9 +88,9 @@ A: Marmotte is built with Laravel, Filament, PHP, MySQL, Redis, and Meilisearch.
 ### Features and Support
 
 **Q: I have a feature request. How can I suggest it?**
-A: We welcome feature requests! You can suggest new features by opening an issue on our [GitHub repository](https://github.com/supervise/supervise/issues). Please ensure that the feature hasn't been requested already before creating a new issue.
+A: We welcome feature requests! You can suggest new features by opening an issue on our [GitHub repository](https://github.com/marmotteio/marmotteio/issues). Please ensure that the feature hasn't been requested already before creating a new issue.
 
-**Q: I need help with Supervise. Where can I ask questions?**
+**Q: I need help with Marmotte. Where can I ask questions?**
 A: We have a few ways you can get help. Check out our [documentation](https://link-to-documentation), join our [Discord community](https://discord.gg/your-discord-invite), or open an issue on our GitHub repository. If you're a paying customer, you can contact us directly at `hello@marmotte.io`.
 
 **Q: What kind of support do you provide for paying customers?**
@@ -99,13 +99,13 @@ A: Paying customers have direct access to our support team at `hello@marmotte.io
 ### Bugs and Contributions
 
 **Q: I found a bug. Where can I report it?**
-A: You can report bugs by opening an issue on our [GitHub repository](https://github.com/supervise/supervise/issues). Please ensure that the bug hasn't been reported already before creating a new issue.
+A: You can report bugs by opening an issue on our [GitHub repository](https://github.com/marmotteio/marmotteio/issues). Please ensure that the bug hasn't been reported already before creating a new issue.
 
-**Q: I want to contribute to Supervise. How can I do that?**
+**Q: I want to contribute to Marmotte. How can I do that?**
 A: We welcome all contributions! You can read our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
 
 **Q: How can I stay updated about new releases and changes?**
-A: You can keep track of updates by following our [GitHub repository](https://github.com/supervise/cube). We also publish updates in our [Discord community](https://discord.gg/your-discord-invite).
+A: You can keep track of updates by following our [GitHub repository](https://github.com/marmotteio/marmotteio). We also publish updates in our [Discord community](https://discord.gg/your-discord-invite).
 
 ## Troubleshooting
 
@@ -116,7 +116,7 @@ Before reaching out to us, we recommend that you first check our [TROUBLESHOOTIN
 If your issue isn't covered in the troubleshooting guide, you can:
 
 - Check if there's already an answer to your question in the [Frequently Asked Questions](#frequently-asked-questions) section.
-- Search for your issue in our [GitHub repository's issues](https://github.com/supervise/supervise/issues) to see if it has been reported or solved already.
+- Search for your issue in our [GitHub repository's issues](https://github.com/marmotteio/marmotteio/issues) to see if it has been reported or solved already.
 - Join our [Discord community](https://discord.gg/your-discord-invite) and ask for help.
 - Contact us directly at `hello@marmotte.io` if you're a paying customer.
 
@@ -159,11 +159,11 @@ We are committed to working with security researchers and the open-source commun
 
 If you encounter any problems or have questions about Marmotte, we are here to help. Here are a few ways you can get support:
 
-1. **Documentation:** We have extensive [documentation](https://link-to-documentation) that covers a wide range of topics about how to use Supervise. It's often the fastest way to get the answers to your questions.
+1. **Documentation:** We have extensive [documentation](https://link-to-documentation) that covers a wide range of topics about how to use Marmotte. It's often the fastest way to get the answers to your questions.
 
-2. **Issue Tracker:** If you've found a bug or want to suggest a new feature, please use our [GitHub issue tracker](https://github.com/supervise/supervise/issues). Before submitting a new issue, please make sure to check if a similar issue hasn't been reported already.
+2. **Issue Tracker:** If you've found a bug or want to suggest a new feature, please use our [GitHub issue tracker](https://github.com/marmotteio/marmotteio/issues). Before submitting a new issue, please make sure to check if a similar issue hasn't been reported already.
 
-3. **Discord Community:** We have a lively Discord community where you can ask questions, share your experiences, and connect with other Marmotte users. Join us on [Discord](https://discord.gg/getsupervise).
+3. **Discord Community:** We have a lively Discord community where you can ask questions, share your experiences, and connect with other Marmotte users. Join us on [Discord](https://discord.gg/marmotteio).
 
 4. **Direct Support:** If you're a paying customer and need direct assistance or have a specific request, you can contact us at `hello@marmotte.io`. We aim to respond to all queries within 48 hours. Please note that this support channel is reserved for our paying customers.
 
