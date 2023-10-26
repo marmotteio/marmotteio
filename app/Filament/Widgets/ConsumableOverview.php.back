@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Filament\Widgets;
+
+use App\Models\ConsumablePerson;
+use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Filament\Widgets\TableWidget as BaseWidget;
+
+class ConsumableOverview extends BaseWidget
+{
+    protected static ?int $sort = 4;
+
+    public function getTableRecordsPerPage(): int|string|null
+    {
+        return 5;
+    }
+
+    public function table(Table $table): Table
+    {
+        return $table
+            ->query(
+                ConsumablePerson::query()->latest('checked_out_at')
+            )
+            ->columns([
+                TextColumn::make('name')
+                    ->badge()
+                    ->url(fn (ConsumablePerson $record) => '/admin/consumables/'.$record->consumable->id.'/edit')
+                    ->getStateUsing(fn (ConsumablePerson $record): string => $record->consumable->id)
+                    ->iconPosition('after')
+                    ->icon('heroicon-o-arrow-right'),
+                Tables\Columns\TextColumn::make('person.name'),
+                Tables\Columns\TextColumn::make('checked_out_at')->dateTime()->label('Checked out at')->alignRight(),
+            ]);
+    }
+}
