@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-This guide provides solutions for common issues that you may encounter when using Supervise. If your issue isn't covered here, please check the [GitHub Issues](https://github.com/your-repo/supervise/issues) or contact our [support team](mailto:hello@marmotte.io) if you're a paying customer.
+This guide provides solutions for common issues that you may encounter when using Marmotte. If your issue isn't covered here, please check the [GitHub Issues](https://github.com/marmotteio/marmotteio/issues) or contact our [support team](mailto:hello@marmotte.io) if you're a paying customer.
 
 ## Table of Contents
 
@@ -76,4 +76,4 @@ If you're having issues with asset management:
 3. Make sure you have the necessary permissions to add or update assets.
 
 Remember, if you can't find a solution to your problem```markdown
-in this guide, feel free to ask for help in our [Discord community](https://discord.gg/your-discord-invite) or contact our [support team](mailto:hello@marmotte.io) if you're a paying customer.
+in this guide, feel free to ask for help in our [Discord community](https://discord.gg/marmotteio) or contact our [support team](mailto:hello@marmotte.io) if you're a paying customer.

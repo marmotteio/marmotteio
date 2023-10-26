@@ -40,7 +40,7 @@ Security updates will be applied to the following versions of Marmotte:
 | 1.0.x   | :white_check_mark: |
 | < 1.0   | :x:                |
 
-We will only provide security updates for the latest version of Supervise. Users are encouraged to upgrade to the latest version as soon as it is available.
+We will only provide security updates for the latest version of Marmotte. Users are encouraged to upgrade to the latest version as soon as it is available.
 
 ## Disclosure Policy
 

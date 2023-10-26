@@ -91,7 +91,7 @@ A: Marmotte is built with Laravel, Filament, PHP, MySQL, Redis, and Meilisearch.
 A: We welcome feature requests! You can suggest new features by opening an issue on our [GitHub repository](https://github.com/marmotteio/marmotteio/issues). Please ensure that the feature hasn't been requested already before creating a new issue.
 
 **Q: I need help with Marmotte. Where can I ask questions?**
-A: We have a few ways you can get help. Check out our [documentation](https://link-to-documentation), join our [Discord community](https://discord.gg/your-discord-invite), or open an issue on our GitHub repository. If you're a paying customer, you can contact us directly at `hello@marmotte.io`.
+A: We have a few ways you can get help. Check out our [documentation](https://link-to-documentation), join our [Discord community](https://discord.gg/marmotteio), or open an issue on our GitHub repository. If you're a paying customer, you can contact us directly at `hello@marmotte.io`.
 
 **Q: What kind of support do you provide for paying customers?**
 A: Paying customers have direct access to our support team at `hello@marmotte.io`. They also have access to premium features not available in the free version.
@@ -105,7 +105,7 @@ A: You can report bugs by opening an issue on our [GitHub repository](https://gi
 A: We welcome all contributions! You can read our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
 
 **Q: How can I stay updated about new releases and changes?**
-A: You can keep track of updates by following our [GitHub repository](https://github.com/marmotteio/marmotteio). We also publish updates in our [Discord community](https://discord.gg/your-discord-invite).
+A: You can keep track of updates by following our [GitHub repository](https://github.com/marmotteio/marmotteio). We also publish updates in our [Discord community](https://discord.gg/marmotteio).
 
 ## Troubleshooting
 
@@ -117,7 +117,7 @@ If your issue isn't covered in the troubleshooting guide, you can:
 
 - Check if there's already an answer to your question in the [Frequently Asked Questions](#frequently-asked-questions) section.
 - Search for your issue in our [GitHub repository's issues](https://github.com/marmotteio/marmotteio/issues) to see if it has been reported or solved already.
-- Join our [Discord community](https://discord.gg/your-discord-invite) and ask for help.
+- Join our [Discord community](https://discord.gg/marmotteio) and ask for help.
 - Contact us directly at `hello@marmotte.io` if you're a paying customer.
 
 Remember, the more details you provide about your problem, the easier it will be for us to help you.

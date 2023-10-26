@@ -1,6 +1,6 @@
 # Marmotte Roadmap
 
-This document outlines our planned feature work for Supervise. We're sharing it to give the community more insight into our roadmap. Please note that these are our intentions as of today and are subject to change.
+This document outlines our planned feature work for Marmotte. We're sharing it to give the community more insight into our roadmap. Please note that these are our intentions as of today and are subject to change.
 
 ## Short-Term Goals
 
@@ -12,7 +12,7 @@ We plan to develop features that allow you to track the complete lifecycle of an
 
 ### Improved Security Features
 
-Security is a top priority for Supervise. We plan to implement advanced security features to further protect your data.
+Security is a top priority for Marmotte. We plan to implement advanced security features to further protect your data.
 
 ## Mid-Term Goals
 
@@ -48,7 +48,7 @@ We're constantly looking to make Marmotte faster and more efficient.
 
 ### Bug Fixes and Minor Enhancements
 
-We continually work to fix bugs and make minor enhancements to improve Supervise.
+We continually work to fix bugs and make minor enhancements to improve Marmotte.
 
 
 This roadmap is subject to change based on community feedback and changes in business priorities. Stay tuned for updates!

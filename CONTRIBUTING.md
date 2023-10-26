@@ -8,7 +8,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 ### Reporting Bugs
 
-This section guides you through submitting a bug report for Supervise. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
+This section guides you through submitting a bug report for Marmotte. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
 
 - **Use a clear and descriptive title** for the issue to identify the problem.
 - **Describe the exact steps which reproduce the problem** in as many details as possible.
