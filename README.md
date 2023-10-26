@@ -51,12 +51,12 @@ Before installing Marmotte, please make sure that no other web servers or databa
 
 1. **Clone this repository to your local machine.**
     ```
-    git clone https://github.com/marmotteio/marmotteiogit
+    git clone https://github.com/marmotteio/marmotteio.git
     ```
 
 2. **Navigate to the project directory.**
     ```
-    cd cube
+    cd marmotteio
     ```
 
 3. **Start the Docker environment.**
