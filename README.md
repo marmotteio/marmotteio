@@ -2,6 +2,28 @@
 
 Marmotte is an open-source IT asset management system built with Laravel, PHP. It's designed to help you keep track of all your IT resources in your business environment.
 
+## Table of Contents
+
+- [Quick deploy](#quick-deploy)
+- [Features](#features)
+- [Running Marmotte with Docker](#running-marmotte-with-docker)
+- [Running with Laravel Sail](#running-with-laravel-sail)
+- [Tech Stack](#tech-stack)
+- [Database Compatibility](#database-compatibility)
+- [Frequently Asked Questions](#frequently-asked-questions)
+    - [General](#general)
+    - [Features and Support](#features-and-support)
+    - [Bugs and Contributions](#bugs-and-contributions)
+    - [Troubleshooting](#troubleshooting)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Security](#security)
+- [Support](#support)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+
 ## Quick deploy
 <a href="https://railway.app/template/r6as-H?referralCode=24E22L">
     <img src="https://railway.app/button.svg" width="149px" alt="Deploy on Railway" />
@@ -39,6 +61,38 @@ And that's it! You now have Marmotte running in a Docker container on your machi
 
 Note: Do remember to adjust the Docker command as per your requirements, particularly if you need to pass in environment variables, link to databases, or make any other configuration changes.
 
+## Running with Laravel Sail
+
+Marmotte utilizes Docker for easy setup and deployment via Laravel Sail, a light-weight command-line interface for interacting with Laravel's default Docker development environment. To get started, ensure you have Docker and Docker Compose installed on your system.
+
+Before installing Marmotte, please make sure that no other web servers or databases are running on your local machine.
+
+1. **Clone this repository to your local machine.**
+    ```
+    git clone https://github.com/marmotteio/marmotteio.git
+    ```
+
+2. **Navigate to the project directory.**
+    ```
+    cd marmotteio
+    ```
+
+3. **Start the Docker environment.**
+
+    Laravel Sail provides a convenient method for starting and managing the Docker services defined by your application's `docker-compose.yml` file. You may start the Docker environment using the `sail up` command:
+
+    ```
+    ./vendor/bin/sail up
+    ```
+
+    The first time you run the Sail `up` command, Sail's Docker images will be built on your machine. This could take several minutes. Subsequent attempts to start Sail will be much faster.
+
+    Sail publishes various services on standard ports on your system. For example, Laravel is accessible on port `80`. Therefore, you may access the project in your web browser at: `http://localhost`.
+
+4. **Visit `localhost` in your browser to access Marmotte.**
+
+   After the Docker containers are running, navigate to `http://localhost` in your web browser. You should see the Marmotte application running.
+
 ## Features
 
 Marmotte offers the following features:
@@ -72,7 +126,6 @@ Development dependencies include tools such as PHPUnit for testing, Laravel Sail
 
 Please refer to the `composer.json` file for the full list of dependencies.
 
-
 ## Database Compatibility
 
 Marmotte is compatible with multiple database systems to cater to various deployment needs. Out of the box, Marmotte supports:
@@ -84,38 +137,6 @@ Marmotte is compatible with multiple database systems to cater to various deploy
 -   PostgreSQL (pgsql): An advanced open-source database system known for its extensibility, standards compliance, and performance. PostgreSQL is a great choice for complex applications that require advanced data types and powerful query capabilities.
 
 When deploying Marmotte, you can choose the database that aligns best with your requirements and infrastructure. Configuration details, such as connection strings and environment variables, can be adjusted accordingly in the application settings.
-
-## Running with Laravel Sail
-
-Marmotte utilizes Docker for easy setup and deployment via Laravel Sail, a light-weight command-line interface for interacting with Laravel's default Docker development environment. To get started, ensure you have Docker and Docker Compose installed on your system.
-
-Before installing Marmotte, please make sure that no other web servers or databases are running on your local machine.
-
-1. **Clone this repository to your local machine.**
-    ```
-    git clone https://github.com/marmotteio/marmotteio.git
-    ```
-
-2. **Navigate to the project directory.**
-    ```
-    cd marmotteio
-    ```
-
-3. **Start the Docker environment.**
-
-    Laravel Sail provides a convenient method for starting and managing the Docker services defined by your application's `docker-compose.yml` file. You may start the Docker environment using the `sail up` command:
-
-    ```
-    ./vendor/bin/sail up
-    ```
-
-    The first time you run the Sail `up` command, Sail's Docker images will be built on your machine. This could take several minutes. Subsequent attempts to start Sail will be much faster.
-
-    Sail publishes various services on standard ports on your system. For example, Laravel is accessible on port `80`. Therefore, you may access the project in your web browser at: `http://localhost`.
-
-4. **Visit `localhost` in your browser to access Marmotte.**
-
-   After the Docker containers are running, navigate to `http://localhost` in your web browser. You should see the Marmotte application running.
 
 ## Frequently Asked Questions
 
