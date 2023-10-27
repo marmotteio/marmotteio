@@ -27,7 +27,8 @@
       "generator": "php -r 'echo bin2hex(random_bytes(16));'"
     },
     "DB_CONNECTION": {
-      "value": "pgsql"
+      "description": "Database connection name",
+      "generator": "echo pgsql"
     }
   }
 }
