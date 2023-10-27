@@ -9,9 +9,8 @@ spec:
       composer install --no-dev &&
       npm ci &&
       npm run build &&
-      rm -rf node_modules &&
-      php artisan migrate --force --seed
-    run_command: php artisan serve --host=0.0.0.0 --port=8080
+      rm -rf node_modules
+    run_command: php artisan migrate --force --seed && php artisan serve --host=0.0.0.0 --port=8080
     envs:
     - key: APP_KEY
       scope: RUN_TIME
