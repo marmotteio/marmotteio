@@ -5,6 +5,12 @@ spec:
       branch: main
       repo_clone_url: https://github.com/marmotteio/marmotteio.git
     name: web
+    build_command: |
+      composer install --no-dev &&
+      npm ci &&
+      npm run build &&
+      rm -rf node_modules
+    run_command: php artisan serve --host=0.0.0.0 --port=8080
     envs:
     - key: APP_KEY
       scope: RUN_TIME
