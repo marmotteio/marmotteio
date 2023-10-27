@@ -13,5 +13,4 @@ spec:
       scope: RUN_TIME
       value: ${db.DATABASE_URL}
   databases:
-  - engine: MYSQL
-    name: db
+  - name: db
