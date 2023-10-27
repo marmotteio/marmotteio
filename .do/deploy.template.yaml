@@ -15,6 +15,15 @@ spec:
     - key: APP_KEY
       scope: RUN_TIME
       value: base64:rDQ9JWALI83IP7XdEbYyL5h9S39NcAtHNmXJBmyGFB0=
+    - key: APP_NAME
+      scope: RUN_TIME
+      value: Marmotte
+    - key: APP_ENV
+      scope: RUN_TIME
+      value: production
+    - key: APP_DEBUG
+      scope: RUN_TIME
+      value: false
     - key: DATABASE_URL
       scope: RUN_TIME
       value: ${db.DATABASE_URL}
