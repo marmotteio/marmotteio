@@ -1,6 +1,6 @@
 ![Marmotte](https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/readme.png)
 
-Marmotte is an open-source IT asset management system built with Laravel, PHP, and MySQL. It's designed to help you keep track of all your IT resources in your business environment.
+Marmotte is an open-source IT asset management system built with Laravel, PHP. It's designed to help you keep track of all your IT resources in your business environment.
 
 ## Quick deploy
 <a href="https://railway.app/template/r6as-H?referralCode=24E22L">
@@ -54,7 +54,6 @@ Marmotte is built with the following technologies:
 
 - [Laravel 10](https://laravel.com): A robust framework for web artisans.
 - [PHP 8.3](https://www.php.net): A popular general-purpose scripting language that is especially suited to web development.
-- [MySQL](https://www.mysql.com): The world's most popular open-source relational database.
 
 Additional PHP packages used in Marmotte:
 
@@ -73,7 +72,20 @@ Development dependencies include tools such as PHPUnit for testing, Laravel Sail
 
 Please refer to the `composer.json` file for the full list of dependencies.
 
-## Installation
+
+## Database Compatibility
+
+Marmotte is compatible with multiple database systems to cater to various deployment needs. Out of the box, Marmotte supports:
+
+-   SQLite: A lightweight, serverless database, ideal for development, testing, or small deployments. With SQLite, the database is stored as a file, making it easy to set up without any additional database server configuration.
+
+-   MySQL: One of the most popular open-source relational database systems. It's well-suited for production environments, offering robust performance, reliability, and a wide range of features.
+
+-   PostgreSQL (pgsql): An advanced open-source database system known for its extensibility, standards compliance, and performance. PostgreSQL is a great choice for complex applications that require advanced data types and powerful query capabilities.
+
+When deploying Marmotte, you can choose the database that aligns best with your requirements and infrastructure. Configuration details, such as connection strings and environment variables, can be adjusted accordingly in the application settings.
+
+## Running with Laravel Sail
 
 Marmotte utilizes Docker for easy setup and deployment via Laravel Sail, a light-weight command-line interface for interacting with Laravel's default Docker development environment. To get started, ensure you have Docker and Docker Compose installed on your system.
 
@@ -113,7 +125,7 @@ Before installing Marmotte, please make sure that no other web servers or databa
 A: Yes, Marmotte is an open-source project and is free to use. However, we also offer paid support and additional features for our paying customers.
 
 **Q: What technologies does Marmotte use?**
-A: Marmotte is built with Laravel, PHP, MySQL, Redis, and Meilisearch. You can find more details in the [Tech Stack](#tech-stack) section.
+A: Marmotte is built with Laravel, PHP, Redis, and Meilisearch. You can find more details in the [Tech Stack](#tech-stack) section.
 
 ### Features and Support
 
