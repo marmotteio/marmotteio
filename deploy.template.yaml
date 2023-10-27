@@ -1,0 +1,17 @@
+spec:
+  name: marmotteio
+  services:
+  - git:
+      branch: main
+      repo_clone_url: https://github.com/marmotteio/marmotteio.git
+    name: web
+    envs:
+    - key: APP_KEY
+      scope: RUN_TIME
+      value: base64:rDQ9JWALI83IP7XdEbYyL5h9S39NcAtHNmXJBmyGFB0=
+    - key: DATABASE_URL
+      scope: RUN_TIME
+      value: ${db.DATABASE_URL}
+  databases:
+  - engine: MYSQL
+    name: db
