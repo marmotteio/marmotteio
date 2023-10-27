@@ -2,7 +2,7 @@
   "name": "Marmotte",
   "description": "OpenSource IT Asset Management Made Simple",
   "repository": "https://github.com/marmotteio/marmotteio",
-  "logo": "https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/logo.png",
+  "logo": "https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/favicon.png",
   "keywords": ["IT asset management", "open source", "saas"],
   "scripts": {
     "heroku-prebuild": "composer install --no-dev",
