@@ -1,0 +1,34 @@
+{
+  "name": "Marmotte",
+  "description": "OpenSource IT Asset Management Made Simple",
+  "repository": "https://github.com/marmotteio/marmotteio",
+  "logo": "https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/logo.png",
+  "keywords": ["IT asset management", "open source", "saas"],
+  "scripts": {
+    "heroku-prebuild": "composer install --no-dev",
+    "heroku-postbuild": "npm ci && npm run build && rm -rf node_modules",
+    "postdeploy": "php artisan migrate"
+  },
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "APP_KEY": {
+      "description": "A random 32 character string for Laravel's encryption key",
+      "generator": "php -r 'echo bin2hex(random_bytes(16));'"
+    },
+    "DB_CONNECTION": {
+      "description": "Database connection name",
+      "value": "pgsql"
+    }
+  }
+}

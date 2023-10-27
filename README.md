@@ -1,13 +1,16 @@
 ![Marmotte](https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/readme.png)
 
-Marmotte is an open-source IT asset management system built with Laravel, Filament, PHP, and MySQL. It's designed to help you keep track of all your IT resources in your business environment.
+Marmotte is an open-source IT asset management system built with Laravel, PHP, and MySQL. It's designed to help you keep track of all your IT resources in your business environment.
+
+## Quick deploy
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/marmotteio/marmotteio/tree/main)
 
 ## Features
 
 Marmotte offers the following features:
 
 - **Asset Tracking:** Keep an inventory of all your IT assets and track their status in real time.
-- **User-Friendly Interface:** Navigate through the system with an intuitive and user-friendly interface, powered by Filament.
+- **User-Friendly Interface:** Navigate through the system with an intuitive and user-friendly interface.
 - **Reports and Analytics:** Generate detailed reports about your IT assets for better decision-making.
 - **Secure:** Security is a top priority. Marmotte is designed with robust security measures to protect your data.
 
@@ -16,23 +19,18 @@ Marmotte offers the following features:
 Marmotte is built with the following technologies:
 
 - [Laravel 10](https://laravel.com): A robust framework for web artisans.
-- [Filament 3](https://filamentadmin.com): A powerful admin panel for Laravel.
 - [PHP 8.3](https://www.php.net): A popular general-purpose scripting language that is especially suited to web development.
 - [MySQL](https://www.mysql.com): The world's most popular open-source relational database.
-- [Redis](https://redis.io): An open-source, in-memory data structure store, used as a database, cache, and message broker.
 
 Additional PHP packages used in Marmotte:
 
-- [alperenersoy/filament-export](https://github.com/alperenersoy/filament-export): Allows exporting of resources in Filament.
 - [flowframe/laravel-trend](https://github.com/flowframe/laravel-trend): Provides trendline functionality in Laravel.
 - [guzzlehttp/guzzle](https://github.com/guzzle/guzzle): A PHP HTTP client and framework for building RESTful web service clients.
 - [laravel/sanctum](https://laravel.com/docs/8.x/sanctum): Laravel Sanctum provides a featherweight authentication system for SPAs and simple APIs.
 - [laravel/tinker](https://github.com/laravel/tinker): A REPL for Laravel.
 - [league/flysystem-aws-s3-v3](https://github.com/thephpleague/flysystem-aws-s3-v3): An AWS S3 adapter for Flysystem.
-- [leandrocfe/filament-apex-charts](https://github.com/LeandroCFe/filament-apex-charts): A Filament package that provides ApexChart integration.
 - [livewire/livewire](https://github.com/livewire/livewire): A full-stack framework for Laravel that makes building dynamic interfaces simple, without leaving the comfort of Laravel.
 - [predis/predis](https://github.com/nrk/predis): A flexible and feature-complete Redis client for PHP.
-- [pxlrbt/filament-spotlight](https://github.com/pxlrbt/filament-spotlight): Adds a Spotlight feature to Filament.
 - [rackbeat/laravel-ui-avatars](https://github.com/rackbeat/laravel-ui-avatars): Generate avatars on the fly in Laravel.
 - [spatie/laravel-backup](https://github.com/spatie/laravel-backup): A package to backup your Laravel app.
 - [spatie/laravel-discord-alerts](https://github.com/spatie/laravel-discord-alerts): Send alerts to Discord from a Laravel app.
@@ -81,7 +79,7 @@ Before installing Marmotte, please make sure that no other web servers or databa
 A: Yes, Marmotte is an open-source project and is free to use. However, we also offer paid support and additional features for our paying customers.
 
 **Q: What technologies does Marmotte use?**
-A: Marmotte is built with Laravel, Filament, PHP, MySQL, Redis, and Meilisearch. You can find more details in the [Tech Stack](#tech-stack) section.
+A: Marmotte is built with Laravel, PHP, MySQL, Redis, and Meilisearch. You can find more details in the [Tech Stack](#tech-stack) section.
 
 ### Features and Support
 
