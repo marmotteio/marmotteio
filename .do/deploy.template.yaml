@@ -24,6 +24,9 @@ spec:
     - key: APP_DEBUG
       scope: RUN_TIME
       value: "false"
+    - key: DB_CONNECTION
+      scope: RUN_TIME
+      value: pgsql
     - key: DATABASE_URL
       scope: RUN_TIME
       value: ${db.DATABASE_URL}
