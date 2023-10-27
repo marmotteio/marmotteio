@@ -1,0 +1,13 @@
+name: marmotteio
+region: nyc
+services:
+- environment_slug: php
+  github:
+    branch: main
+    repo: marmotteio/marmotteio
+  http_port: 80
+  instance_size_slug: basic-xxs
+  name: web
+databases:
+- engine: MYSQL
+  name: db
