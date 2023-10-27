@@ -62,24 +62,6 @@ class HardwareResource extends Resource
         ];
     }
 
-    protected function handleRecordCreation(array $data): Model
-    {
-        $customFieldsData = [];
-
-        if (isset($data['custom_fields'])) {
-            $customFieldsData = $data['custom_fields'];
-            unset($data['custom_fields']);
-        }
-
-        $record = static::getModel()::create($data);
-
-        if (! empty($customFieldsData)) {
-            $this->saveCustomFields($customFieldsData, $record);
-        }
-
-        return $record;
-    }
-
     public static function form(Form $form): Form
     {
         return $form

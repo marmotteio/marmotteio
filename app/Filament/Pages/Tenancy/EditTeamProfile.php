@@ -2,7 +2,6 @@
 
 namespace App\Filament\Pages\Tenancy;
 
-use App\Models\Account;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -13,7 +12,7 @@ class EditTeamProfile extends EditTenantProfile
 {
     public static function getLabel(): string
     {
-        return "Settings";
+        return 'Settings';
     }
 
     public function form(Form $form): Form

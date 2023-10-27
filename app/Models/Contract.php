@@ -6,12 +6,10 @@ use App\Traits\HasTeam;
 use App\Traits\Tenantable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Contract extends Model implements HasMedia
+class Contract extends Model
 {
-    use HasFactory, HasTeam, InteractsWithMedia, Tenantable;
+    use HasFactory, HasTeam, Tenantable;
 
     protected $fillable = [
         'name',

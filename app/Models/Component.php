@@ -67,11 +67,6 @@ class Component extends Model
         return $this->belongsTo(Location::class);
     }
 
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class);
-    }
-
     public function department(): BelongsTo
     {
         return $this->belongsTo(Department::class);

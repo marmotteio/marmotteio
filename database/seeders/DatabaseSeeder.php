@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        if (!User::exists()) {
+        if (! User::exists()) {
             User::create([
                 'name' => 'Admin',
                 'email' => 'admin@marmotte.io',
