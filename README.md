@@ -75,13 +75,7 @@ Note: Do remember to adjust the Docker command as per your requirements, particu
 
 Once Marmotte is running within a Docker container, there might be scenarios where you need to view logs in real-time, or you might want to stop the container. Here's how you can do that:
 
-#### Viewing Logs:
-
 To tail the logs in real-time for your running container, use the following command:
-
-    docker logs -f marmotteio
-
-To view logs from your running container, execute:
 
     docker logs -f marmotteio
 
