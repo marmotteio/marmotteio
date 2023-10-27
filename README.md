@@ -23,7 +23,7 @@ Firstly, if you haven't already, you need to install Docker. Detailed instructio
 
 Once Docker is installed, you can deploy Marmotte with just one command:
 
-    docker run -p 8080:80 -v /path/on/host/marmotte_data:/app/data marmotteio/marmotteio:latest
+    docker run -p 8080:80 -v .:/app/data marmotteio/marmotteio:latest
 
 After the Docker container is running, you can open your favorite browser and head over to:
 
