@@ -17,7 +17,7 @@ spec:
       value: base64:rDQ9JWALI83IP7XdEbYyL5h9S39NcAtHNmXJBmyGFB0=
     - key: APP_NAME
       scope: RUN_TIME
-      value: Marmotte
+      value: Marmotte.io
     - key: APP_ENV
       scope: RUN_TIME
       value: production
