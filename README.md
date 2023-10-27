@@ -37,6 +37,15 @@ Marmotte is an open-source IT asset management system built with Laravel, PHP. I
     <img src="https://www.deploytodo.com/do-btn-blue.svg" width="200px" alt="Deploy to DO" />
 </a>
 
+## Features
+
+Marmotte offers the following features:
+
+- **Asset Tracking:** Keep an inventory of all your IT assets and track their status in real time.
+- **User-Friendly Interface:** Navigate through the system with an intuitive and user-friendly interface.
+- **Reports and Analytics:** Generate detailed reports about your IT assets for better decision-making.
+- **Secure:** Security is a top priority. Marmotte is designed with robust security measures to protect your data.
+
 ## Running Marmotte with Docker
 
 Using Docker is one of the quickest and most efficient ways to get Marmotte up and running, irrespective of the platform you're on. Docker encapsulates the application within a container, ensuring it has all the dependencies it needs to run. This means you don't have to worry about installing any additional software or libraries; Docker handles it all for you.
@@ -92,15 +101,6 @@ Before installing Marmotte, please make sure that no other web servers or databa
 4. **Visit `localhost` in your browser to access Marmotte.**
 
    After the Docker containers are running, navigate to `http://localhost` in your web browser. You should see the Marmotte application running.
-
-## Features
-
-Marmotte offers the following features:
-
-- **Asset Tracking:** Keep an inventory of all your IT assets and track their status in real time.
-- **User-Friendly Interface:** Navigate through the system with an intuitive and user-friendly interface.
-- **Reports and Analytics:** Generate detailed reports about your IT assets for better decision-making.
-- **Secure:** Security is a top priority. Marmotte is designed with robust security measures to protect your data.
 
 ## Tech Stack
 
