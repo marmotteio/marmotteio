@@ -23,7 +23,7 @@ spec:
       value: production
     - key: APP_DEBUG
       scope: RUN_TIME
-      value: false
+      value: "false"
     - key: DATABASE_URL
       scope: RUN_TIME
       value: ${db.DATABASE_URL}
