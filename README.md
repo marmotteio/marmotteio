@@ -15,6 +15,26 @@ Marmotte is an open-source IT asset management system built with Laravel, PHP, a
     <img src="https://www.deploytodo.com/do-btn-blue.svg" width="200px" alt="Deploy to DO" />
 </a>
 
+## Running Marmotte with Docker
+
+Using Docker is one of the quickest and most efficient ways to get Marmotte up and running, irrespective of the platform you're on. Docker encapsulates the application within a container, ensuring it has all the dependencies it needs to run. This means you don't have to worry about installing any additional software or libraries; Docker handles it all for you.
+
+Firstly, if you haven't already, you need to install Docker. Detailed instructions for various platforms can be found on the [official Docker documentation](https://docs.docker.com/get-docker/).
+
+Once Docker is installed, you can deploy Marmotte with just one command:
+
+    ```
+    docker run -p 8080:80 -v /path/on/host/marmotte_data:/app/data marmotteio/marmotteio:latest
+    ```
+
+After the Docker container is running, you can open your favorite browser and head over to:
+
+[http://localhost:8080](http://localhost:8080/)
+
+And that's it! You now have Marmotte running in a Docker container on your machine. This method is especially useful for quick deployments, testing, or even for production scenarios if configured properly.
+
+Note: Do remember to adjust the Docker command as per your requirements, particularly if you need to pass in environment variables, link to databases, or make any other configuration changes.
+
 ## Features
 
 Marmotte offers the following features:
