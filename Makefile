@@ -14,10 +14,12 @@ push-docker:
 git:
 	git add -A
 	opencommit
-	git tag v$(VERSION)
 
-push-git:
-	git push
+push-tags:
+	git tag v$(VERSION)
 	git push --tags
 
-release: git bump-version build-docker push-docker push-git
+github-release:
+	gh release create v$(VERSION) --title "Release v$(VERSION)" --notes "Release version v$(VERSION)"
+
+release: git bump-version push-tags build-docker push-docker github-release
