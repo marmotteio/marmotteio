@@ -54,7 +54,6 @@ Once Docker is installed, you can deploy Marmotte with just one command:
         --name marmotteio \
         -e APP_NAME=Marmotte.io \
         -e APP_ENV=local \
-        -e APP_KEY=base64:rDQ9JWALI83IP7XdEbYyL5h9S39NcAtHNmXJBmyGFB0= \
         -e APP_DEBUG=true \
         -e APP_URL=http://0.0.0.0:5959 \
         -e DB_CONNECTION=sqlite \
