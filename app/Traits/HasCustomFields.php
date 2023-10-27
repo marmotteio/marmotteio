@@ -117,7 +117,7 @@ trait HasCustomFields
         }
 
         return Section::make('Custom fields')
-            ->description('Please fill in the following form')
+            ->description('Please fill in the following custom fields')
             ->columns($columnsCount)
             ->schema($schema);
     }
