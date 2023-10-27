@@ -3,7 +3,7 @@
 Marmotte is an open-source IT asset management system built with Laravel, PHP, and MySQL. It's designed to help you keep track of all your IT resources in your business environment.
 
 ## Quick deploy
-<a href="https://heroku.com/deploy?template=https://github.com/marmotteio/marmotteio/tree/main" style="margin-right: 10px;">
+<a href="https://heroku.com/deploy?template=https://github.com/marmotteio/marmotteio/tree/main" style="margin-right: 10px!important;text-decoration: none!important;">
     <img src="https://www.herokucdn.com/deploy/button.svg" width="150px" alt="Deploy" />
 </a>
 
