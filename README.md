@@ -50,21 +50,45 @@ Firstly, if you haven't already, you need to install Docker. Detailed instructio
 
 Once Docker is installed, you can deploy Marmotte with just one command:
 
-    docker run -p 8080:80 \
+    docker run -d -p 5959:8000 \
+        --name marmotteio \
+        -e APP_NAME=Marmotte.io \
+        -e APP_ENV=local \
+        -e APP_KEY=base64:rDQ9JWALI83IP7XdEbYyL5h9S39NcAtHNmXJBmyGFB0= \
+        -e APP_DEBUG=true \
+        -e APP_URL=http://0.0.0.0:5959 \
         -e DB_CONNECTION=sqlite \
-        -e DB_DATABASE=/app/data/marmotte.sqlite \
+        -e DB_DATABASE=/app/marmotte.sqlite \
         -e DB_FOREIGN_KEYS=true \
-        -v .:/app/data \
+        -v $(pwd):/app \
         marmotteio/marmotteio:latest
 
 
 After the Docker container is running, you can open your favorite browser and head over to:
 
-[http://localhost:8080](http://localhost:8080/)
+[http://localhost:5959](http://localhost:5959)
 
 And that's it! You now have Marmotte running in a Docker container on your machine. This method is especially useful for quick deployments, testing, or even for production scenarios if configured properly.
 
 Note: Do remember to adjust the Docker command as per your requirements, particularly if you need to pass in environment variables, link to databases, or make any other configuration changes.
+
+### Viewing Logs and Managing the Docker Container
+
+Once Marmotte is running within a Docker container, there might be scenarios where you need to view logs in real-time, or you might want to stop the container. Here's how you can do that:
+
+#### Viewing Logs:
+
+To tail the logs in real-time for your running container, use the following command:
+
+    docker logs -f marmotteio
+
+To view logs from your running container, execute:
+
+    docker logs -f marmotteio
+
+To stop the Marmotte Docker container:
+
+    docker stop marmotteio
 
 ## Running with Laravel Sail
 
