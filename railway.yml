@@ -1,7 +1,7 @@
 services:
   - name: web
     image: php:8.2
-    buildCommand: composer install --no-dev && npm ci && npm run build && php artisan migrate --seed
+    buildCommand: composer install --no-dev && npm ci && npm run build && php artisan migrate --force --seed
     runCommand: php artisan serve --host=0.0.0.0 --port=${PORT}
     port: ${PORT}
     plugins:

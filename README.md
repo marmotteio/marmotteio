@@ -11,8 +11,8 @@ Marmotte is an open-source IT asset management system built with Laravel, PHP, a
     <img src="https://www.deploytodo.com/do-btn-blue.svg" width="200px" alt="Deploy to DO" />
 </a>
 &nbsp;
-<a href="https://railway.app/new/template?template=https://github.com/marmotteio/marmotteio&plugins=mysql">
-    <img src="https://railway.app/button.svg" width="200px" alt="Deploy on Railway" />
+<a href="https://railway.app/template/r6as-H?referralCode=24E22L">
+    <img src="https://railway.app/button.svg" width="149px" alt="Deploy on Railway" />
 </a>
 
 ## Features
