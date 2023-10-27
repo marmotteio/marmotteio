@@ -2,6 +2,8 @@
 
 namespace App\Traits;
 
+use Filament\Facades\Filament;
+
 trait Tenantable
 {
     /**
@@ -13,7 +15,7 @@ trait Tenantable
     {
         static::saving(function ($model) {
             if (is_null($model->team_id)) {
-                $model->team_id = \Filament\Facades\Filament::getTenant()->id;
+                $model->team_id = Filament::getTenant()->id;
             }
         });
     }

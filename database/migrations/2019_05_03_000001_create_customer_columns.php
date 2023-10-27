@@ -130,12 +130,6 @@ return new class extends Migration
             $table->json('files')->nullable();
             $table->string('name');
             $table->string('color')->nullable();
-            $table->enum('type', [
-                'archived',
-                'undeployable',
-                'pending',
-                'deployable',
-            ]);
             $table->timestamps();
         });
 

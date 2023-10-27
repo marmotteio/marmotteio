@@ -28,6 +28,7 @@ class Licence extends Model
         'licensed_to_email',
         'product_key',
         'purchase_date',
+        'order_number',
         'purchase_cost',
         'department_id',
         'supplier_id',
