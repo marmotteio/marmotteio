@@ -6,9 +6,11 @@ use App\Filament\Pages\Tenancy\EditTeamProfile;
 use App\Filament\Pages\Tenancy\RegisterTeam;
 use App\Http\Middleware\ApplyTenantScopes;
 use App\Models\Team;
+use Filament\Facades\Filament;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -67,6 +69,17 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->tenant(Team::class)
+            ->tenantMenuItems([
+                MenuItem::make()
+                    ->label('Users')
+                    ->url(fn (): string => '/admin/'.Filament::getTenant()->id.'/users'),
+                MenuItem::make()
+                    ->label('Hardware Models')
+                    ->url(fn (): string => '/admin/'.Filament::getTenant()->id.'/hardware-models'),
+                MenuItem::make()
+                    ->label('Hardware Statuses')
+                    ->url(fn (): string => '/admin/'.Filament::getTenant()->id.'/hardware-statuses'),
+            ])
             ->tenantRegistration(RegisterTeam::class)
             ->tenantProfile(EditTeamProfile::class)
             ->tenantMiddleware([

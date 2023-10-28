@@ -10,6 +10,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -56,16 +57,12 @@ class UserResource extends Resource
                 ...CreatedAtUpdatedAtComponent::render(),
             ])
             ->filters([
-                //
             ])
             ->actions([
-                // Tables\Actions\EditAction::make(),
             ])
             ->headerActions([
-                //FilamentExportHeaderAction::make('export'),
             ])
             ->bulkActions([
-                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
@@ -86,7 +83,6 @@ class UserResource extends Resource
         return [
             'index' => Pages\ListUsers::route('/'),
             // 'create' => Pages\CreateUser::route('/create'),
-            // 'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }
 }
