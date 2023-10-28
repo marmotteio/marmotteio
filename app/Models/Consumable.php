@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Traits\HasTeam;
 use App\Traits\HasUniqueIdentifier;
+use App\Traits\NotifiesOnModelChange;
 use App\Traits\Quantifiable;
 use App\Traits\Tenantable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,7 +18,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Consumable extends Model
 {
-    use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable, Tenantable;
+    use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable, Tenantable, NotifiesOnModelChange;
 
     protected $quantifiableRelationships = ['people'];
 

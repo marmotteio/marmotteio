@@ -13,7 +13,6 @@ class Alert extends Model
     {
         $records = [];
 
-        // For Consumables
         $consumables = Consumable::all();
         foreach ($consumables as $consumable) {
             if ($consumable->totalQuantityLeft() <= $consumable->threshold) {
@@ -29,7 +28,6 @@ class Alert extends Model
             }
         }
 
-        // For Licences
         $licences = Licence::all();
         foreach ($licences as $licence) {
             if ($licence->totalQuantityLeft() <= $licence->threshold) {
@@ -45,7 +43,6 @@ class Alert extends Model
             }
         }
 
-        // For Components
         $components = Component::all();
         foreach ($components as $component) {
             if ($component->totalQuantityLeft() <= $component->threshold) {

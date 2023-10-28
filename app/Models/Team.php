@@ -14,6 +14,8 @@ class Team extends Model
     protected $fillable = [
         'name',
         'currency',
+        'discordWebhookUrl',
+        'slackWebhookUrl',
     ];
 
     public function members(): BelongsToMany

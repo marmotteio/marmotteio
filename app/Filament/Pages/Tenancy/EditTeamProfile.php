@@ -33,6 +33,20 @@ class EditTeamProfile extends EditTenantProfile
                             ])
                             ->required(),
                     ]),
+
+                Section::make('Notification settings')
+                    ->collapsible()
+                    ->compact()
+                    ->columns(2)
+                    ->schema([
+                        TextInput::make('discordWebhookUrl')
+                            ->label("Discord")
+                            ->helperText('Enter your Discord webhook URL to receive notifications in case of an alert.'),
+
+                        TextInput::make('slackWebhookUrl')
+                            ->label("Slack")
+                            ->helperText('Enter your Slack webhook URL to receive notifications in case of an alert.'),
+                    ]),
             ]);
     }
 }
