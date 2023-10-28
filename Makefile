@@ -1,5 +1,9 @@
 VERSION := $(shell cat VERSION)
 
+git:
+	git add -A
+	opencommit
+
 bump-version:
 	echo $(VERSION) | awk -F. '{print $$1"."$$2"."$$3+1}' > VERSION
 
@@ -10,10 +14,6 @@ build-docker:
 push-docker:
 	docker push marmotteio/marmotteio:$(VERSION)
 	docker push marmotteio/marmotteio:latest
-
-git:
-	git add -A
-	opencommit
 
 push-tags:
 	git tag v$(VERSION)
