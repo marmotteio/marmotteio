@@ -75,5 +75,4 @@ If you're having issues with asset management:
 2. Ensure that the MySQL database is correctly initialized and populated with the necessary tables.
 3. Make sure you have the necessary permissions to add or update assets.
 
-Remember, if you can't find a solution to your problem```markdown
-in this guide, feel free to ask for help in our [Discord community](https://discord.gg/marmotteio) or contact our [support team](mailto:hello@marmotte.io) if you're a paying customer.
+Remember, if you can't find a solution to your problem in this guide, feel free to ask for help in our [Discord community](https://discord.gg/marmotteio) or contact our [support team](mailto:hello@marmotte.io) if you're a paying customer.
