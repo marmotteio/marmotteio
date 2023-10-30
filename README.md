@@ -167,7 +167,7 @@ A: Marmotte is built with Laravel, PHP, Redis, and Meilisearch. You can find mor
 A: We welcome feature requests! You can suggest new features by opening an issue on our [GitHub repository](https://github.com/marmotteio/marmotteio/issues). Please ensure that the feature hasn't been requested already before creating a new issue.
 
 **Q: I need help with Marmotte. Where can I ask questions?**
-A: We have a few ways you can get help. Check out our [documentation](https://link-to-documentation), join our [Discord community](https://discord.gg/marmotteio), or open an issue on our GitHub repository. If you're a paying customer, you can contact us directly at `hello@marmotte.io`.
+A: We have a few ways you can get help. Check out our [documentation](https://docs.marmotte.io), join our [Discord community](https://discord.gg/CmfnnkUx), or open an issue on our GitHub repository. If you're a paying customer, you can contact us directly at `hello@marmotte.io`.
 
 **Q: What kind of support do you provide for paying customers?**
 A: Paying customers have direct access to our support team at `hello@marmotte.io`. They also have access to premium features not available in the free version.
@@ -181,7 +181,7 @@ A: You can report bugs by opening an issue on our [GitHub repository](https://gi
 A: We welcome all contributions! You can read our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
 
 **Q: How can I stay updated about new releases and changes?**
-A: You can keep track of updates by following our [GitHub repository](https://github.com/marmotteio/marmotteio). We also publish updates in our [Discord community](https://discord.gg/marmotteio).
+A: You can keep track of updates by following our [GitHub repository](https://github.com/marmotteio/marmotteio). We also publish updates in our [Discord community](https://discord.gg/CmfnnkUx).
 
 ## Troubleshooting
 
@@ -193,7 +193,7 @@ If your issue isn't covered in the troubleshooting guide, you can:
 
 - Check if there's already an answer to your question in the [Frequently Asked Questions](#frequently-asked-questions) section.
 - Search for your issue in our [GitHub repository's issues](https://github.com/marmotteio/marmotteio/issues) to see if it has been reported or solved already.
-- Join our [Discord community](https://discord.gg/marmotteio) and ask for help.
+- Join our [Discord community](https://discord.gg/CmfnnkUx) and ask for help.
 - Contact us directly at `hello@marmotte.io` if you're a paying customer.
 
 Remember, the more details you provide about your problem, the easier it will be for us to help you.
@@ -235,11 +235,11 @@ We are committed to working with security researchers and the open-source commun
 
 If you encounter any problems or have questions about Marmotte, we are here to help. Here are a few ways you can get support:
 
-1. **Documentation:** We have extensive [documentation](https://link-to-documentation) that covers a wide range of topics about how to use Marmotte. It's often the fastest way to get the answers to your questions.
+1. **Documentation:** We have extensive [documentation](https://docs.marmotte.io) that covers a wide range of topics about how to use Marmotte. It's often the fastest way to get the answers to your questions.
 
 2. **Issue Tracker:** If you've found a bug or want to suggest a new feature, please use our [GitHub issue tracker](https://github.com/marmotteio/marmotteio/issues). Before submitting a new issue, please make sure to check if a similar issue hasn't been reported already.
 
-3. **Discord Community:** We have a lively Discord community where you can ask questions, share your experiences, and connect with other Marmotte users. Join us on [Discord](https://discord.gg/marmotteio).
+3. **Discord Community:** We have a lively Discord community where you can ask questions, share your experiences, and connect with other Marmotte users. Join us on [Discord](https://discord.gg/CmfnnkUx).
 
 4. **Direct Support:** If you're a paying customer and need direct assistance or have a specific request, you can contact us at `hello@marmotte.io`. We aim to respond to all queries within 48 hours. Please note that this support channel is reserved for our paying customers.
 
