@@ -22,7 +22,7 @@ class EditTeamProfile extends EditTenantProfile
                 Section::make('Team settings')
                     ->collapsible()
                     ->compact()
-                    ->columns(2)
+                    ->columns(3)
                     ->schema([
                         TextInput::make('name')
                             ->required(),
@@ -37,7 +37,7 @@ class EditTeamProfile extends EditTenantProfile
                 Section::make('Notification settings')
                     ->collapsible()
                     ->compact()
-                    ->columns(2)
+                    ->columns(3)
                     ->schema([
                         TextInput::make('discordWebhookUrl')
                             ->label("Discord")
