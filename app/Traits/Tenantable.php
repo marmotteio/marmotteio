@@ -15,7 +15,7 @@ trait Tenantable
     {
         static::saving(function ($model) {
             if (is_null($model->team_id)) {
-                $model->team_id = Filament::getTenant()->id;
+                $model->team_id = Filament::getTenant()?->id;
             }
         });
     }

@@ -24,25 +24,24 @@ class Hardware extends Model
     use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable, Tenantable;
 
     protected $fillable = [
-        'serial_number',
-        'order_number',
-        'team_id',
+        'department_id',
+        'end_of_life_date',
+        'expected_checkin_date',
+        'files',
         'hardware_model_id',
         'hardware_status_id',
-        'department_id',
-        'supplier_id',
         'location_id',
-        'expected_checkin_date',
-        'purchase_date',
-        'end_of_life_date',
-        'purchase_cost',
-        'notes',
-        'requestable',
         'name',
-        'team_id',
-        'files',
         'notes',
+        'order_number',
+        'purchase_cost',
+        'purchase_date',
         'qr_code',
+        'quantity',
+        'requestable',
+        'serial_number',
+        'supplier_id',
+        'team_id',
     ];
 
     protected $casts = [
