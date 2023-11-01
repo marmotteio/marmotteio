@@ -1,0 +1,78 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Marmotte",
+        "version": "1.0.7"
+    },
+    "servers": [
+        {
+            "url": "https:\/\/marmotte.test"
+        }
+    ],
+    "paths": {
+        "\/api\/v1\/hardware": {
+            "get": {
+                "tags": [
+                    "Hardware"
+                ],
+                "summary": "Retrieve a list of hardware."
+            },
+            "post": {
+                "tags": [
+                    "Hardware"
+                ],
+                "summary": "Store a new hardware item."
+            }
+        },
+        "\/api\/v1\/hardware\/{hardware}": {
+            "get": {
+                "tags": [
+                    "Hardware"
+                ],
+                "summary": "Retrieve a specific hardware item by ID.",
+                "parameters": [
+                    {
+                        "name": "hardware",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Hardware"
+                ],
+                "summary": "Update a specific hardware item by ID.",
+                "parameters": [
+                    {
+                        "name": "hardware",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Hardware"
+                ],
+                "summary": "Delete a specific hardware item by ID.",
+                "parameters": [
+                    {
+                        "name": "hardware",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
