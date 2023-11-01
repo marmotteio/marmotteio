@@ -97,6 +97,13 @@ trait HasCustomFields
                         ->formatStateUsing($valueCallback);
                     break;
 
+                case 'number':
+                    $component = \Filament\Forms\Components\TextInput::make('custom_fields.'.$customField->name)
+                        ->label($customField->name)
+                        ->numeric()
+                        ->formatStateUsing($valueCallback);
+                    break;
+
                 case 'date':
                     $component = \Filament\Forms\Components\DatePicker::make('custom_fields.'.$customField->name)
                         ->label($customField->name)

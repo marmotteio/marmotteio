@@ -10,7 +10,7 @@ trait NotifiesOnModelChange
     {
         static::updated(function ($model) {
             if ($model->totalQuantityLeft() <= $model->threshold) {
-                DiscordAlertService::sendAlert($model->team->discordWebhookUrl, class_basename($model) . " $model->name (id=$model->id) has " . $model->totalQuantityLeft() . " left.");
+                DiscordAlertService::sendAlert($model->team->discordWebhookUrl, class_basename($model)." $model->name (id=$model->id) has ".$model->totalQuantityLeft().' left.');
             }
         });
     }
