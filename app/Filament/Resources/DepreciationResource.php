@@ -97,30 +97,36 @@ class DepreciationResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->numeric()
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('hardware.hardware_model.name')
                     ->label('Hardware')
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('purchase_date')
                     ->sortable()
                     ->date(),
                 Tables\Columns\TextColumn::make('purchase_price')
                     ->money(Filament::getTenant()->currency)
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('depreciation_expense')
                     ->money(Filament::getTenant()->currency)
                     ->alignRight()
                     ->toggleable()
+                    ->searchable()
                     ->toggledHiddenByDefault(true)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('accumulated_depreciation')
                     ->money(Filament::getTenant()->currency)
                     ->alignRight()
+                    ->searchable()
                     ->toggleable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('current_book_value')
                     ->money(Filament::getTenant()->currency)
                     ->alignRight()
+                    ->searchable()
                     ->toggleable()
                     ->sortable(),
             ])

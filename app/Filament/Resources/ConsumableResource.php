@@ -100,7 +100,6 @@ class ConsumableResource extends Resource
                     ->label('Quantity'),
                 TextColumn::make('people_count')
                     ->counts('people')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['people'])." out of $state")
                     ->sortable()
                     ->color('gray')

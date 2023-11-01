@@ -167,7 +167,6 @@ class HardwareResource extends Resource
                 TextColumn::make('serial_number')->sortable()->alignRight()->searchable()->badge(),
                 TextColumn::make('people_count')
                     ->counts('people')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['people'])." out of $state")
                     ->sortable()
                     ->color('gray')
@@ -175,7 +174,6 @@ class HardwareResource extends Resource
                     ->label('People'),
                 TextColumn::make('components_count')
                     ->counts('components')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['components'])." out of $state")
                     ->sortable()
                     ->color('gray')
@@ -183,7 +181,6 @@ class HardwareResource extends Resource
                     ->label('Components'),
                 TextColumn::make('licences_count')
                     ->counts('licences')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['licences'])." out of $state")
                     ->sortable()
                     ->color('gray')

@@ -111,7 +111,6 @@ class LicenceResource extends Resource
                     ->label('Quantity'),
                 TextColumn::make('people_count')
                     ->counts('people')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['people'])." out of $state")
                     ->sortable()
                     ->color('gray')
@@ -119,7 +118,6 @@ class LicenceResource extends Resource
                     ->label('People'),
                 TextColumn::make('hardware_count')
                     ->counts('hardware')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['hardware'])." out of $state")
                     ->sortable()
                     ->color('gray')

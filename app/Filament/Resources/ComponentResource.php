@@ -102,7 +102,6 @@ class ComponentResource extends Resource
                     ->label('Quantity'),
                 TextColumn::make('hardware_count')
                     ->counts('hardware')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['hardware'])." out of $state")
                     ->sortable()
                     ->color('gray')
