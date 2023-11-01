@@ -92,7 +92,6 @@ class PersonResource extends Resource
                 TextColumn::make('phone')->sortable()->searchable(),
                 TextColumn::make('hardware_count')
                     ->counts('hardware')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['hardware'])." out of $state")
                     ->sortable()
                     ->color('gray')
@@ -100,7 +99,6 @@ class PersonResource extends Resource
                     ->label('Hardware'),
                 TextColumn::make('consumables_count')
                     ->counts('consumables')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['consumables'])." out of $state")
                     ->sortable()
                     ->color('gray')
@@ -108,7 +106,6 @@ class PersonResource extends Resource
                     ->label('Consumables'),
                 TextColumn::make('licences_count')
                     ->counts('licences')
-                    ->searchable()
                     ->formatStateUsing(fn (string $state, Model $record): string => $record->totalNotCheckedInFor(['licences'])." out of $state")
                     ->sortable()
                     ->color('gray')
