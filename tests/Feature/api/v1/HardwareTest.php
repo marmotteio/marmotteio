@@ -6,7 +6,6 @@ use App\Models\Hardware;
 use App\Models\HardwareModel;
 use App\Models\HardwareStatus;
 use App\Models\Team;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\Feature\ApiCase;
 

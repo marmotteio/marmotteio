@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Licence extends Model
 {
-    use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable, NotifiesOnModelChange;
+    use HasFactory, HasTeam, HasUniqueIdentifier, NotifiesOnModelChange, Quantifiable;
 
     protected $quantifiableRelationships = ['hardware', 'people'];
 

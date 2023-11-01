@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Component extends Model
 {
-    use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable, Tenantable, NotifiesOnModelChange;
+    use HasFactory, HasTeam, HasUniqueIdentifier, NotifiesOnModelChange, Quantifiable, Tenantable;
 
     protected $quantifiableRelationships = ['hardware'];
 

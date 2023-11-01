@@ -40,11 +40,11 @@ class EditTeamProfile extends EditTenantProfile
                     ->columns(3)
                     ->schema([
                         TextInput::make('discordWebhookUrl')
-                            ->label("Discord")
+                            ->label('Discord')
                             ->helperText('Enter your Discord webhook URL to receive notifications in case of an alert.'),
 
                         TextInput::make('slackWebhookUrl')
-                            ->label("Slack")
+                            ->label('Slack')
                             ->helperText('Enter your Slack webhook URL to receive notifications in case of an alert.'),
                     ]),
             ]);
