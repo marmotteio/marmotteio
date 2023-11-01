@@ -22,4 +22,4 @@ push-tags:
 github-release:
 	gh release create v$(VERSION) --title "Release v$(VERSION)" --notes "Release version v$(VERSION)"
 
-release: bump-version git push-tags build-docker push-docker github-release
+release: git push-tags build-docker push-docker github-release
