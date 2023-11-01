@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use App\Traits\HasTeam;
+use App\Traits\Tenantable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class CustomField extends Model
 {
-    use HasFactory, HasTeam;
+    use HasFactory, HasTeam, Tenantable;
 
     protected $fillable = ['name', 'field_type', 'applicable_model'];
 

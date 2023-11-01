@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\HasTeam;
 use App\Traits\HasUniqueIdentifier;
 use App\Traits\Quantifiable;
+use App\Traits\Tenantable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -18,7 +19,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Person extends Model
 {
-    use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable;
+    use HasFactory, HasTeam, HasUniqueIdentifier, Tenantable;
 
     protected $fillable = [
         'name',

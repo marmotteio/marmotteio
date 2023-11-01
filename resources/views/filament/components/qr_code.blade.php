@@ -3,12 +3,12 @@
 @endphp
 
 @if($qrValue)
-    <div class="flex items-center rounded-lg space-x-3 p-2">
+    <div class="flex items-center rounded-lg space-x-3 p-2 bg-white/80">
         <div>
-            {!! QrCode::size(76)->color(240, 240, 240)->backgroundColor(24, 24, 27)->generate($qrValue->getUniqueIdentifier()) !!}
+            {!! QrCode::size(76)->color(0, 0, 0)->backgroundColor(209, 209, 209)->generate($qrValue->getUniqueIdentifier()) !!}
         </div>
 
-        <div class="text-white text-sm font-medium">
+        <div class="text-black/90 text-sm font-medium">
             Use the following QR code to identify this record.
         </div>
     </div>
