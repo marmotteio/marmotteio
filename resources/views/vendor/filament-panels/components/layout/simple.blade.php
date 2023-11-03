@@ -25,6 +25,17 @@
         .split-layout .right-section {
             flex: 1 1 75%;
         }
+
+        :root {
+            --primary-600: #d2d04a;
+            --primary-500: #a2a035;
+        }
+
+        .right-section {
+            --c-500: var(--primary-500);
+            --c-600: var(--primary-600);
+            background: linear-gradient(to bottom, var(--primary-600), var(--primary-500)) !important;
+        }
     </style>
 
     <div class="fi-simple-layout dark">
@@ -35,7 +46,7 @@
                         {{ $slot }}
                     </div>
 
-                    <div class="right-section dark:bg-custom-500" style="--c-500: var(--primary-600);">
+                    <div class="right-section">
                         <div class="text-center">
                             <h1 class="text-2xl mb-4 text-black font-bold">Welcome back,</h1>
                             <p class="text-black">Log in to access your personalized dashboard and manage your assets.</p>

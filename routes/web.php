@@ -17,7 +17,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/', function () {
     return redirect('/admin');
-});
+})->name('login');
 
 Route::get('/auth/redirect', function () {
     return Socialite::driver('github')->redirect();

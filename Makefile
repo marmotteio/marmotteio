@@ -9,7 +9,7 @@ bump-version:
 
 build-docker:
 	docker build -t marmotteio/marmotteio:$(VERSION) .
-	docker tag marmotteio/marmotteio:$(VERSION) marmotteio/marmotteio:latest
+	docker build -t marmotteio/marmotteio:latest .
 
 push-docker:
 	docker push marmotteio/marmotteio:$(VERSION)

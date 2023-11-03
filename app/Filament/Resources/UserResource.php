@@ -13,6 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
@@ -43,6 +44,11 @@ class UserResource extends Resource
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+                TextInput::make('password')
+                    ->label('New password')
+                    ->password()
+                    ->dehydrated(fn ($state) => filled($state))
+                    ->dehydrateStateUsing(fn ($state) => Hash::make($state)),
                 ImagesAndNoteComponent::render(),
             ])->columns(1);
     }
@@ -58,6 +64,7 @@ class UserResource extends Resource
             ->filters([
             ])
             ->actions([
+                Tables\Actions\EditAction::make(),
             ])
             ->headerActions([
             ])
@@ -81,7 +88,6 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
-            // 'create' => Pages\CreateUser::route('/create'),
         ];
     }
 }
