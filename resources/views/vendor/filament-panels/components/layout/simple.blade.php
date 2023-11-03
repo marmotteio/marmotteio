@@ -26,15 +26,8 @@
             flex: 1 1 75%;
         }
 
-        :root {
-            --primary-600: #d2d04a;
-            --primary-500: #a2a035;
-        }
-
         .right-section {
-            --c-500: var(--primary-500);
-            --c-600: var(--primary-600);
-            background: linear-gradient(to bottom, var(--primary-600), var(--primary-500)) !important;
+            background: linear-gradient(to bottom, #a2a035, #73711d) !important;
         }
     </style>
 
