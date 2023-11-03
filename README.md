@@ -67,6 +67,8 @@ After the Docker container is running, you can open your favorite browser and he
 
 [http://localhost:5959](http://localhost:5959)
 
+Default email is `admin@marmotte.io`, and default password is `marmotte.io`.
+
 And that's it! You now have Marmotte running in a Docker container on your machine. This method is especially useful for quick deployments, testing, or even for production scenarios if configured properly.
 
 Note: Do remember to adjust the Docker command as per your requirements, particularly if you need to pass in environment variables, link to databases, or make any other configuration changes.
