@@ -59,7 +59,7 @@ Once Docker is installed, you can deploy Marmotte with just one command:
         -e DB_CONNECTION=sqlite \
         -e DB_DATABASE=/app/marmotte.sqlite \
         -e DB_FOREIGN_KEYS=true \
-        -v $(pwd):/app \
+        -v marmotteio:/app \
         marmotteio/marmotteio:latest
 
 
