@@ -70,6 +70,7 @@ jobs:
           file: ./Dockerfile
           tags: |
             ${{ env.DOCKERHUB_IMAGE }}:${{ env.VERSION }}
+            ${{ env.DOCKERHUB_IMAGE }}:latest
             ${{ env.GHCR_IMAGE }}:${{ env.VERSION }}
           labels: |
             version=${{ env.VERSION }}
