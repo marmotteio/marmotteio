@@ -1,6 +1,7 @@
 # Laravel specific
 .env.*.local
 .env.local
+.env
 *.log
 
 # Node/NPM artifacts
