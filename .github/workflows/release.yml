@@ -68,8 +68,11 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          tags: ${{ env.VERSION }}
-          labels: ${{ env.VERSION }}
+          tags: |
+            ${{ env.DOCKERHUB_IMAGE }}:${{ env.VERSION }}
+            ${{ env.GHCR_IMAGE }}:${{ env.VERSION }}
+          labels: |
+            version=${{ env.VERSION }}
           platforms: linux/amd64,linux/arm64
           push: true
           cache-from: type=local,src=/tmp/.buildx-cache
