@@ -8,8 +8,8 @@ bump-version:
 	echo $(VERSION) | awk -F. '{print $$1"."$$2"."$$3+1}' > VERSION
 
 build-docker:
-	docker build -t marmotteio/marmotteio:$(VERSION) .
-	docker build -t marmotteio/marmotteio:latest .
+	docker buildx build --platform linux/amd64,linux/arm64 -t marmotteio/marmotteio:$(VERSION) .
+	docker buildx build --platform linux/amd64,linux/arm64 -t marmotteio/marmotteio:latest .
 
 push-docker:
 	docker push marmotteio/marmotteio:$(VERSION)
