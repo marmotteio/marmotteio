@@ -50,7 +50,7 @@ Firstly, if you haven't already, you need to install Docker. Detailed instructio
 
 Once Docker is installed, you can deploy Marmotte with just one command:
 
-    docker run -d -p 5959:8000 \
+    docker run -p 5959:8000 \
         --name marmotteio \
         -e APP_NAME=Marmotte.io \
         -e APP_ENV=local \

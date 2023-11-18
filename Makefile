@@ -7,6 +7,9 @@ git:
 bump-version:
 	echo $(VERSION) | awk -F. '{print $$1"."$$2"."$$3+1}' > VERSION
 
+build-npm:
+	npm run build
+
 build-docker:
 	docker buildx build --platform linux/amd64,linux/arm64 -t marmotteio/marmotteio:$(VERSION) .
 	docker buildx build --platform linux/amd64,linux/arm64 -t marmotteio/marmotteio:latest .
