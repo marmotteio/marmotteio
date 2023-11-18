@@ -6,4 +6,5 @@ COPY . .
 RUN apk add --no-cache mysql-client mariadb-connector-c
 RUN composer install --no-interaction --optimize-autoloader --no-dev
 RUN chown -R application:application .
+RUN chmod +x /app/start.sh
 CMD ["./start.sh"]

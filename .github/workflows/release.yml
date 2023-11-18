@@ -74,7 +74,7 @@ jobs:
             ${{ env.GHCR_IMAGE }}:${{ env.VERSION }}
           labels: |
             version=${{ env.VERSION }}
-          platforms: linux/amd64,linux/arm64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64
           push: true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
