@@ -7,7 +7,7 @@ Marmotte is an open-source IT asset management system built with Laravel, PHP. I
 - [Quick deploy](#quick-deploy)
 - [Features](#features)
 - [Running Marmotte with Docker](#running-marmotte-with-docker)
-- [Running with Laravel Sail](#running-with-laravel-sail)
+- [Running in dev-mode with Laravel Sail](#running-in-dev-mode-with-laravel-sail)
 - [Tech Stack](#tech-stack)
 - [Database Compatibility](#database-compatibility)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -86,7 +86,37 @@ To stop the Marmotte Docker container:
 
     docker stop marmotteio
 
-## Running with Laravel Sail
+## Running Marmotte with Docker Compose
+
+Docker Compose offers a convenient method to deploy applications like Marmotte, which might consist of several containers that need to interact with each other. The `docker-compose.yml` file in the Marmotte repository defines how these containers should be built and run.
+
+### Prerequisites
+- Docker and Docker Compose must be installed on your machine. These tools are essential for running containers and managing multi-container applications.
+
+### Detailed Steps
+
+1. **Clone the Marmotte Repository**: First, clone the Marmotte repository. This repository contains the necessary source code and configuration files, including `docker-compose.yml`. In your terminal, use the git clone command followed by the repository's URL. This step downloads the latest version of the Marmotte code to your local machine.
+
+2. **Navigate to the Repository Directory**: Change your current directory in the terminal to the one where you cloned the Marmotte repository. This directory contains the Docker Compose file that you will use in the next steps.
+
+3. **Inspect the Docker Compose File**: Before proceeding, take a moment to open and review the `docker-compose.yml` file. This file is a YAML file that specifies how Docker should run and manage the service containers that make up your Marmotte application. Check for things like the defined services, the ports that are exposed, and any volume mappings. Understanding this file helps you grasp how the application components are orchestrated.
+
+4. **Run Docker Compose**: Execute the following command in the terminal:
+
+    docker-compose up
+
+This command tells Docker Compose to start the services defined in your `docker-compose.yml` file. On the first run, Docker will download the necessary images and build the containers, which might take some time. Once the process is complete, your Marmotte application will be running inside these containers.
+
+5. **Access Marmotte**: Open a web browser and go to `http://localhost:5959` to access the Marmotte application. This URL connects you to the local instance of Marmotte running in your Docker containers.
+
+### Additional Information and Tips
+- The `docker-compose up` command may take longer during the first execution due to the downloading and building of Docker images. Subsequent runs will be faster as Docker caches these builds.
+- Regularly check the Marmotte repository for updates, especially for changes in the `docker-compose.yml` file, as these might include critical updates or feature additions.
+- If you encounter any issues or need to make advanced configurations, refer to the Marmotte documentation or seek community support.
+
+By following these detailed steps, you can successfully run and manage the Marmotte application using Docker Compose.
+
+## Running in dev-mode with Laravel Sail
 
 Marmotte utilizes Docker for easy setup and deployment via Laravel Sail, a light-weight command-line interface for interacting with Laravel's default Docker development environment. To get started, ensure you have Docker and Docker Compose installed on your system.
 
@@ -104,7 +134,7 @@ Before installing Marmotte, please make sure that no other web servers or databa
 
 3. **Start the Docker environment.**
 
-    Laravel Sail provides a convenient method for starting and managing the Docker services defined by your application's `docker-compose.yml` file. You may start the Docker environment using the `sail up` command:
+    Laravel Sail provides a convenient method for starting and managing the Docker services defined by your application's `docker-compose.dev.yml` file. Rename it to docker-compose.yml, then start the Docker environment using the `sail up` command:
 
     ```
     ./vendor/bin/sail up
