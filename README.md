@@ -7,6 +7,7 @@ Marmotte is an open-source IT asset management system built with Laravel, PHP. I
 - [Quick deploy](#quick-deploy)
 - [Features](#features)
 - [Running Marmotte with Docker](#running-marmotte-with-docker)
+- [Running Marmotte with Docker Compose](#running-marmotte-with-docker-compose)
 - [Running in dev-mode with Laravel Sail](#running-in-dev-mode-with-laravel-sail)
 - [Tech Stack](#tech-stack)
 - [Database Compatibility](#database-compatibility)
