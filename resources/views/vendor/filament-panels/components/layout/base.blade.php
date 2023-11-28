@@ -7,8 +7,7 @@
     lang="{{ str_replace('_', '-', app()->getLocale()) }}"
     dir="{{ __('filament-panels::layout.direction') ?? 'ltr' }}"
     @class([
-        'fi min-h-screen',
-        'dark' => true,
+        'fi min-h-screen dark',
     ])
 >
     <head>

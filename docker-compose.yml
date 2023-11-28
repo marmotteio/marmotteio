@@ -6,8 +6,8 @@ services:
     container_name: marmotteio
     environment:
       - APP_NAME=Marmotte.io
-      - APP_ENV=local
-      - APP_DEBUG=true
+      - APP_ENV=production
+      - APP_DEBUG=false
       - APP_URL=http://0.0.0.0:5959
       - APP_KEY=base64:RVvW9+2jO9MpuTDyxmIO45Z9t7BY0VWxgDImBNmhFwA
       - DB_CONNECTION=mysql

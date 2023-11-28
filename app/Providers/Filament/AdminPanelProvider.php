@@ -28,6 +28,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->darkMode(true, true)
             ->id('admin')
             ->path('admin')
             ->login()
