@@ -16,7 +16,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.9",
         "laravel/tinker": "^2.8",
-        "leandrocfe/filament-apex-charts": "^3.0",
+        "leandrocfe/filament-apex-charts": "^3.1",
         "sentry/sentry-laravel": "^3.8",
         "simplesoftwareio/simple-qrcode": "^4.2",
         "spatie/laravel-discord-alerts": "^1.3",

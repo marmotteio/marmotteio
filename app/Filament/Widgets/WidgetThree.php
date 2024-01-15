@@ -10,7 +10,7 @@ class WidgetThree extends ApexChartWidget
     /**
      * Chart Id
      */
-    protected static string $chartId = 'blogPostsChart';
+    protected static ?string $chartId = 'blogPostsChart';
 
     /**
      * Widget Title
