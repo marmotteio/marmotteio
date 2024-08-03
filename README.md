@@ -51,13 +51,13 @@ Firstly, if you haven't already, you need to install Docker. Detailed instructio
 
 Once Docker is installed, you can deploy Marmotte with just one command:
 
-    docker run -p 5959:8000 \
+    docker run -p 8000:8000 \
         --name marmotteio \
         -e APP_NAME=Marmotte.io \
-        -e APP_ENV=local \
+        -e APP_ENV=development \
         -e APP_DEBUG=true \
-        -e APP_URL=http://0.0.0.0:5959 \
-        -e ASSET_URL=http://0.0.0.0:5959 \
+        -e APP_URL=http://0.0.0.0:8000 \
+        -e ASSET_URL=http://0.0.0.0:8000 \
         -e APP_KEY=base64:RVvW9+2jO9MpuTDyxmIO45Z9t7BY0VWxgDImBNmhFwA= \
         -e DB_CONNECTION=sqlite \
         -e DB_DATABASE=/app/marmotte.sqlite \
@@ -68,7 +68,7 @@ Once Docker is installed, you can deploy Marmotte with just one command:
 
 After the Docker container is running, you can open your favorite browser and head over to:
 
-[http://localhost:5959](http://localhost:5959)
+[http://localhost:8000](http://localhost:8000)
 
 Default email is `admin@marmotte.io`, and default password is `marmotte.io`.
 
@@ -109,7 +109,7 @@ Docker Compose offers a convenient method to deploy applications like Marmotte, 
 
 This command tells Docker Compose to start the services defined in your `docker-compose.yml` file. On the first run, Docker will download the necessary images and build the containers, which might take some time. Once the process is complete, your Marmotte application will be running inside these containers.
 
-5. **Access Marmotte**: Open a web browser and go to `http://localhost:5959` to access the Marmotte application. This URL connects you to the local instance of Marmotte running in your Docker containers.
+5. **Access Marmotte**: Open a web browser and go to `http://localhost:8000` to access the Marmotte application. This URL connects you to the local instance of Marmotte running in your Docker containers.
 
 ### Additional Information and Tips
 - The `docker-compose up` command may take longer during the first execution due to the downloading and building of Docker images. Subsequent runs will be faster as Docker caches these builds.

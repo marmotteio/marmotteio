@@ -11,6 +11,7 @@ class DiscordAlertService
         if (empty($webhookUrl) || empty($message)) {
             return;
         }
+
         DiscordAlert::to($webhookUrl)->message($message);
     }
 }
