@@ -5,12 +5,12 @@ namespace App\Filament\Widgets;
 use App\Models\ConsumablePerson;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
-class BlogPostsChart extends ApexChartWidget
+class ConsumablesConsumptionChart extends ApexChartWidget
 {
     /**
      * Chart Id
      */
-    protected static ?string $chartId = 'blogPostsChart';
+    protected static ?string $chartId = 'consumables-consumption';
 
     /**
      * Widget Title

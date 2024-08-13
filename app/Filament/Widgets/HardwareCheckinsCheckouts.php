@@ -12,7 +12,7 @@ class HardwareCheckinsCheckouts extends ApexChartWidget
     /**
      * Chart Id
      */
-    protected static ?string $chartId = 'anotherBlogPostsChart';
+    protected static ?string $chartId = 'hardware-checkins-and-checkouts';
 
     protected static ?int $sort = -22;
 
