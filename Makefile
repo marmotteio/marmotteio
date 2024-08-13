@@ -2,7 +2,6 @@ VERSION := $(shell cat VERSION)
 
 git:
 	git add -A
-	opencommit
 
 bump-version:
 	echo $(VERSION) | awk -F. '{print $$1"."$$2"."$$3+1}' > VERSION

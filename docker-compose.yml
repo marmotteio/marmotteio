@@ -20,9 +20,8 @@ services:
     volumes:
       - marmotteio:/app
     image: marmotteio/marmotteio:latest
-
   marmotteiodb:
-    image: mariadb:10.6
+    image: mariadb:latest
     restart: always
     command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
     volumes:
@@ -32,7 +31,6 @@ services:
       - MYSQL_PASSWORD=marmotteio
       - MYSQL_DATABASE=marmotteio
       - MYSQL_USER=marmotteio
-
 volumes:
   marmotteio: {}
   marmotteiodb: {}

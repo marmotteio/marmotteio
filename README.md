@@ -8,7 +8,6 @@ Marmotte is an open-source IT asset management system built with Laravel, PHP. I
 - [Features](#features)
 - [Running Marmotte with Docker](#running-marmotte-with-docker)
 - [Running Marmotte with Docker Compose](#running-marmotte-with-docker-compose)
-- [Running in dev-mode with Laravel Sail](#running-in-dev-mode-with-laravel-sail)
 - [Tech Stack](#tech-stack)
 - [Database Compatibility](#database-compatibility)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -138,7 +137,7 @@ Additional PHP packages used in Marmotte:
 - [spatie/laravel-backup](https://github.com/spatie/laravel-backup): A package to backup your Laravel app.
 - [spatie/laravel-discord-alerts](https://github.com/spatie/laravel-discord-alerts): Send alerts to Discord from a Laravel app.
 
-Development dependencies include tools such as PHPUnit for testing, Laravel Sail for managing the Docker environment, and Faker for generating fake data.
+Development dependencies include tools such as PHPUnit for testing, Docker Compose for managing the Docker environment, and Faker for generating fake data.
 
 Please refer to the `composer.json` file for the full list of dependencies.
 
