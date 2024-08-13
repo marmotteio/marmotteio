@@ -21,6 +21,16 @@ push-tags:
 	git tag v$(VERSION)
 	git push --tags
 
+clean:
+	rm -rf storage/clockwork
+	find . -name '. DS_Store' -type f -delete
+	php artisan optimize:clear
+	php artisan config:clear
+	composer upgrade
+	npm upgrade
+	npm run build
+	./vendor/bin/pint
+
 github-release:
 	gh release create v$(VERSION) --title "Release v$(VERSION)" --notes "Release version v$(VERSION)"
 

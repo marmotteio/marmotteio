@@ -15,7 +15,7 @@ trait Quantifiable
         return $this->quantity - $totalCheckedOut;
     }
 
-    public function totalNotCheckedInFor(array $relationships = null)
+    public function totalNotCheckedInFor(?array $relationships = null)
     {
         $totalCheckedOut = 0;
 

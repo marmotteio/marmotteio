@@ -17,8 +17,5 @@ class QRCode extends Component
         $this->getRecordId();
     }
 
-    private function getRecordId()
-    {
-
-    }
+    private function getRecordId() {}
 }

@@ -33,7 +33,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->plugins([
-                FilamentApexChartsPlugin::make()
+                FilamentApexChartsPlugin::make(),
             ])
             ->login()
             ->colors([

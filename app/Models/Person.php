@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Person extends Model
 {
-    use HasFactory, HasTeam, HasUniqueIdentifier, Tenantable, Quantifiable;
+    use HasFactory, HasTeam, HasUniqueIdentifier, Quantifiable, Tenantable;
 
     protected $fillable = [
         'name',
