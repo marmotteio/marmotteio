@@ -12,7 +12,7 @@
         "calebporzio/sushi": "^2.4",
         "filament/filament": "^3.0",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "10.29.0",
+        "laravel/framework": "^10.29",
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.9",
         "laravel/tinker": "^2.8",
