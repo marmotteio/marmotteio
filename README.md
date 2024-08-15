@@ -1,5 +1,3 @@
-# Marmotte: Open-Source IT Asset Management System
-
 ![Marmotte](https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/readme.png)
 
 Marmotte is a powerful, open-source IT asset management system built with Laravel and PHP. Designed to help businesses of all sizes efficiently track and manage their IT resources, Marmotte offers a user-friendly interface, robust features, and seamless integration capabilities.
