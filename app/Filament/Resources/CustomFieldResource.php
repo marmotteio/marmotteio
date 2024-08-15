@@ -77,6 +77,12 @@ class CustomFieldResource extends Resource
                 TextColumn::make('applicable_model')
                     ->searchable()
                     ->formatStateUsing(function (string $state): string {
+
+                        \Filament\Notifications\Notification::make()
+                            ->title('Saved successfully')
+                            ->success()
+                            ->sendToDatabase(auth()->user());
+
                         return class_basename($state);
                     })
                     ->sortable()
