@@ -1,8 +1,7 @@
 <?php
 
-use App\Models\User;
 use App\Http\Middleware\InitializeTenancyByCookie;
-use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 

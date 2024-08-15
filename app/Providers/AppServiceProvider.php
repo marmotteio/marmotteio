@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Middleware\InitializeTenancyByCookie;
 use Illuminate\Support\ServiceProvider;
 use Livewire;
-use App\Http\Middleware\InitializeTenancyByCookie;
 
 class AppServiceProvider extends ServiceProvider
 {
