@@ -98,7 +98,7 @@ class HardwareCheckinsCheckouts extends ApexChartWidget
                     ],
                 ],
             ],
-            'colors' => ['#AAB434', '#34AAB4'],
+            'colors' => ['#6B40FF', '#34AAB4'],
             'stroke' => [
                 'curve' => 'smooth',
             ],

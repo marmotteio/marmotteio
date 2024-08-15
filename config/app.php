@@ -170,6 +170,7 @@ return [
         App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
         Vyuldashev\LaravelOpenApi\OpenApiServiceProvider::class,
+        App\Providers\TenancyServiceProvider::class,
     ])->toArray(),
 
     /*

@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire;
+use App\Http\Middleware\InitializeTenancyByCookie;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,10 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (env('FORCE_HTTPS', false)) {
-            \URL::forceScheme('https');
-        } else {
-            \URL::forceScheme('http');
-        }
+        Livewire::addPersistentMiddleware([
+            InitializeTenancyByCookie::class,
+        ]);
     }
 }

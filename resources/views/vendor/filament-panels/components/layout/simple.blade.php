@@ -42,7 +42,7 @@
                     <div class="right-section">
                         <div class="text-center">
                             <h1 class="text-2xl mb-4 text-black font-bold">Welcome back,</h1>
-                            <p class="text-black">Log in to access your personalized dashboard and manage your assets.</p>
+                            <p class="text-black">{{tenant('id')}}Log in to access your personalized dashboard and manage your assets.</p>
                         </div>
                     </div>
                 </div>

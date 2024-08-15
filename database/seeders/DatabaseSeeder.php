@@ -8,6 +8,7 @@ use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Tenant;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,30 +17,40 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $team = Team::create([
-            'name' => 'Team 1',
-        ]);
+        Tenant::find('default')?->delete();
 
-        if (! User::exists()) {
-            $user = User::create([
-                'name' => 'Admin',
-                'email' => 'admin@marmotte.io',
-                'password' => Hash::make('marmotte.io'),
+        \DB::statement('DROP DATABASE IF EXISTS `tenant_default`;');
+
+        $tenant = Tenant::create(['id' => 'default']);
+
+        $tenant->domains()->create(['domain' => '127.0.0.1']);
+
+        $tenant->run(function () {
+            $team = Team::create([
+                'name' => 'Team 1',
             ]);
 
-            $team->users()->attach($user);
-        }
+            if (! User::exists()) {
+                $user = User::create([
+                    'name' => 'Admin',
+                    'email' => 'admin@marmotte.io',
+                    'password' => Hash::make('marmotte.io'),
+                ]);
 
-        $hardwareStatusesNames = [
-            'Deployed',
-            'In Stock',
-            'In Repair',
-            'Retired',
-            'Lost/Stolen',
-        ];
+                $team->users()->attach($user);
+            }
 
-        foreach ($hardwareStatusesNames as $statusName) {
-            HardwareStatus::create(['team_id' => $team->id, 'name' => $statusName]);
-        }
+            $hardwareStatusesNames = [
+                'Deployed',
+                'In Stock',
+                'In Repair',
+                'Retired',
+                'Lost/Stolen',
+            ];
+
+            foreach ($hardwareStatusesNames as $statusName) {
+                HardwareStatus::create(['team_id' => $team->id, 'name' => $statusName]);
+            }
+        });
     }
 }
