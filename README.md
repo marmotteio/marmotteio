@@ -1,4 +1,4 @@
-# Marmotte: Enterprise-Grade Open-Source IT Asset Management System
+# Enterprise-Grade Open-Source IT Asset Management
 
 ![Marmotte](https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/readme.png)
 
