@@ -1,65 +1,344 @@
+# Marmotte: Enterprise-Grade Open-Source IT Asset Management System
+
 ![Marmotte](https://raw.githubusercontent.com/marmotteio/marmotteio/main/public/readme.png)
 
-Marmotte is a powerful, open-source IT asset management system built with Laravel and PHP. Designed to help businesses of all sizes efficiently track and manage their IT resources, Marmotte offers a user-friendly interface, robust features, and seamless integration capabilities.
+Marmotte is a powerful, feature-rich, open-source IT asset management system built with Laravel and PHP. Designed to help businesses of all sizes efficiently track, manage, and optimize their IT resources, Marmotte offers a user-friendly interface, robust features, and seamless integration capabilities.
+
+[![GitHub license](https://img.shields.io/github/license/marmotteio/marmotteio.svg)](https://github.com/marmotteio/marmotteio/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/marmotteio/marmotteio.svg)](https://github.com/marmotteio/marmotteio/releases/)
+[![GitHub stars](https://img.shields.io/github/stars/marmotteio/marmotteio.svg)](https://github.com/marmotteio/marmotteio/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/marmotteio/marmotteio.svg)](https://github.com/marmotteio/marmotteio/issues/)
+[![Build Status](https://travis-ci.org/marmotteio/marmotteio.svg?branch=main)](https://travis-ci.org/marmotteio/marmotteio)
 
 ## Table of Contents
 
 - [Quick Deploy](#quick-deploy)
 - [Introduction](#introduction)
+  - [Why Choose Marmotte?](#why-choose-marmotte)
+  - [Use Cases](#use-cases)
 - [Key Features](#key-features)
+  - [Asset Tracking](#asset-tracking)
+  - [Real-time Monitoring](#real-time-monitoring)
+  - [User Interface](#user-interface)
+  - [Reporting and Analytics](#reporting-and-analytics)
+  - [Lifecycle Management](#lifecycle-management)
+  - [User and Access Management](#user-and-access-management)
+  - [Alerts and Notifications](#alerts-and-notifications)
+  - [Compliance and Auditing](#compliance-and-auditing)
+  - [Integration Capabilities](#integration-capabilities)
+  - [Localization](#localization)
+  - [Mobile Access](#mobile-access)
+  - [Software License Management](#software-license-management)
+  - [Vendor Management](#vendor-management)
+  - [Financial Management](#financial-management)
+  - [Customization](#customization)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+    - [Traditional Installation](#traditional-installation)
     - [Running Marmotte with Docker](#running-marmotte-with-docker)
     - [Running Marmotte with Docker Compose](#running-marmotte-with-docker-compose)
   - [Configuration](#configuration)
-- [Usage](#usage)
+    - [Environment Settings](#environment-settings)
+    - [Database Setup](#database-setup)
+    - [User Authentication](#user-authentication)
+    - [Email Configuration](#email-configuration)
+    - [Caching and Queue Management](#caching-and-queue-management)
+    - [Asset Categories and Custom Fields](#asset-categories-and-custom-fields)
+- [Usage Guide](#usage-guide)
+  - [Adding Assets](#adding-assets)
+  - [Asset Assignment](#asset-assignment)
+  - [Maintenance Tracking](#maintenance-tracking)
+  - [Reporting](#reporting)
+  - [Alert Management](#alert-management)
+  - [Software License Tracking](#software-license-tracking)
+  - [Conducting Audits](#conducting-audits)
+  - [Cost Analysis](#cost-analysis)
+  - [Vendor Management](#vendor-management-1)
+  - [Team Collaboration](#team-collaboration)
+- [Advanced Features](#advanced-features)
+  - [API Integration](#api-integration)
+  - [Workflow Automation](#workflow-automation)
+  - [Data Import/Export](#data-importexport)
+  - [Multi-tenancy](#multi-tenancy)
 - [Tech Stack](#tech-stack)
 - [Database Compatibility](#database-compatibility)
 - [API Documentation](#api-documentation)
 - [Customization and Extensibility](#customization-and-extensibility)
+  - [Plugin Development](#plugin-development)
+  - [Theme Customization](#theme-customization)
+  - [Localization Contributions](#localization-contributions)
+- [Performance Optimization](#performance-optimization)
+- [Security Measures](#security-measures)
+- [Backup and Disaster Recovery](#backup-and-disaster-recovery)
 - [Frequently Asked Questions](#frequently-asked-questions)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
+  - [Code Contributions](#code-contributions)
+  - [Documentation](#documentation)
+  - [Bug Reports](#bug-reports)
+  - [Feature Requests](#feature-requests)
 - [Security](#security)
-- [Support](#support)
-- [Authors](#authors)
+- [Support Options](#support-options)
+  - [Community Support](#community-support)
+  - [Professional Support](#professional-support)
+- [Authors and Maintainers](#authors-and-maintainers)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
+- [Community and Resources](#community-and-resources)
+- [Sponsors](#sponsors)
+- [Changelog](#changelog)
+- [Upgrading](#upgrading)
+- [Benchmarks](#benchmarks)
+- [Code of Conduct](#code-of-conduct)
+- [Related Projects](#related-projects)
+- [Case Studies](#case-studies)
+- [Final Notes](#final-notes)
 
 ## Quick Deploy
 
 Get Marmotte up and running quickly with these one-click deploy options:
 
-<a href="https://railway.app/template/r6as-H?referralCode=24E22L">
-    <img src="https://railway.app/button.svg" width="149px" alt="Deploy on Railway" />
-</a>
-&nbsp;
-<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/marmotteio/marmotteio/tree/main">
-    <img src="https://www.deploytodo.com/do-btn-blue.svg" width="200px" alt="Deploy to DO" />
-</a>
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/r6as-H?referralCode=24E22L)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/marmotteio/marmotteio/tree/main)
 
 ## Introduction
 
-In today's fast-paced business environment, managing IT assets efficiently is crucial for maintaining productivity, security, and cost-effectiveness. Marmotte provides a comprehensive solution for tracking, managing, and optimizing your organization's IT resources, from hardware to software licenses.
+In today's rapidly evolving business landscape, efficient management of IT assets is crucial for maintaining productivity, ensuring security, and optimizing costs. Marmotte provides a comprehensive, scalable solution for tracking, managing, and optimizing your organization's IT resources, from hardware and software to digital licenses and cloud assets.
+
+### Why Choose Marmotte?
+
+Marmotte stands out from other IT asset management solutions due to its:
+
+1. **Open-Source Nature**: Full transparency and customization potential, backed by a vibrant community.
+2. **Modern Tech Stack**: Built on Laravel and Vue.js, ensuring high performance, scalability, and ease of development.
+3. **User-Centric Design**: Intuitive interface that reduces the learning curve and improves productivity.
+4. **Extensive API**: Seamless integration with existing systems and workflows.
+5. **Scalability**: Suitable for small startups to large enterprises, with multi-tenancy support.
+6. **Compliance Focus**: Built-in features to assist with regulatory compliance (e.g., GDPR, HIPAA).
+7. **Cost-Effective**: No per-user licensing fees, with optional professional support available.
+8. **Active Development**: Regular updates, security patches, and new features.
+9. **Customization**: Extensible architecture allowing for tailored solutions.
+10. **Community-Driven**: Benefit from contributions and innovations from a global developer community.
+
+### Use Cases
+
+Marmotte is versatile and can be applied in various scenarios:
+
+- **Enterprise IT Departments**: Manage diverse IT assets across multiple locations.
+- **Managed Service Providers (MSPs)**: Track client assets and streamline service delivery.
+- **Educational Institutions**: Monitor lab equipment, student devices, and software licenses.
+- **Healthcare Organizations**: Ensure compliance and track medical IT equipment.
+- **Government Agencies**: Maintain transparency and accountability in IT asset management.
+- **Startups and SMEs**: Cost-effective solution for growing IT infrastructure.
 
 ## Key Features
 
-Marmotte offers a rich set of features to streamline your IT asset management:
+Marmotte offers a comprehensive set of features to streamline your IT asset management:
 
-- **Asset Tracking:** Maintain a detailed inventory of all IT assets, including hardware, software, and digital resources.
-- **Real-time Status Monitoring:** Keep track of asset status, location, and utilization in real-time.
-- **User-Friendly Interface:** Navigate through the system with an intuitive, responsive interface designed for ease of use.
-- **Customizable Dashboard:** Get a quick overview of your IT asset landscape with customizable widgets and data visualizations.
-- **Reports and Analytics:** Generate comprehensive reports and gain valuable insights to inform decision-making.
-- **Asset Lifecycle Management:** Track assets from procurement to retirement, including maintenance schedules and depreciation.
-- **User and Role Management:** Define user roles and permissions to ensure secure access to asset information.
-- **Alerts and Notifications:** Set up custom alerts for maintenance, renewals, or other important events.
-- **Audit Trail:** Maintain a detailed history of all asset-related activities for compliance and accountability.
-- **API Integration:** Connect Marmotte with other systems in your IT ecosystem through our robust API.
-- **Multi-language Support:** Use Marmotte in your preferred language with our built-in localization features.
-- **Mobile-Friendly:** Access and manage your IT assets on-the-go with our responsive mobile interface.
+### Asset Tracking
+
+- **Detailed Inventory Management**:
+  - Track hardware, software, cloud resources, and digital assets.
+  - Store comprehensive asset information including specifications, purchase details, and custom attributes.
+  - Support for asset hierarchies and relationships (e.g., components within a system).
+
+- **Barcode and QR Code Integration**:
+  - Generate and print asset tags for physical tracking.
+  - Mobile app support for scanning and quick asset lookups.
+
+- **Automated Discovery**:
+  - Network scanning to automatically detect and catalog new assets.
+  - Integration with popular network management tools.
+
+### Real-time Monitoring
+
+- **Asset Status Tracking**:
+  - Real-time updates on asset location, usage, and health.
+  - Integration with monitoring tools for live performance data.
+
+- **Threshold Alerts**:
+  - Set custom thresholds for various metrics (e.g., disk space, license usage).
+  - Receive instant notifications when thresholds are approached or exceeded.
+
+- **Availability Monitoring**:
+  - Track uptime and availability of critical assets.
+  - Historical availability reporting for SLA management.
+
+### User Interface
+
+- **Intuitive Dashboard**:
+  - Customizable widgets for at-a-glance information.
+  - Role-based dashboards to show relevant information to different user types.
+
+- **Responsive Design**:
+  - Fully responsive interface accessible from desktop, tablet, and mobile devices.
+  - Touch-optimized controls for ease of use on touchscreen devices.
+
+- **Search and Filter**:
+  - Powerful search functionality with support for complex queries.
+  - Advanced filtering and sorting options for large asset databases.
+
+### Reporting and Analytics
+
+- **Customizable Reports**:
+  - Generate detailed reports on asset utilization, costs, and performance.
+  - Drag-and-drop report builder for custom report creation.
+
+- **Data Visualization**:
+  - Interactive charts and graphs for visual data representation.
+  - Export capabilities in multiple formats (PDF, Excel, CSV).
+
+- **Predictive Analytics**:
+  - Trend analysis for capacity planning and budget forecasting.
+  - Machine learning integration for anomaly detection and predictive maintenance.
+
+### Lifecycle Management
+
+- **Procurement to Retirement Tracking**:
+  - Manage assets through their entire lifecycle.
+  - Automated workflows for procurement, deployment, and retirement processes.
+
+- **Maintenance Scheduling**:
+  - Plan and track regular maintenance activities.
+  - Integration with calendaring systems for reminders and scheduling.
+
+- **Depreciation Tracking**:
+  - Multiple depreciation methods supported.
+  - Automated calculations and reporting for financial planning.
+
+### User and Access Management
+
+- **Role-Based Access Control (RBAC)**:
+  - Define granular permissions based on user roles.
+  - Support for custom roles and permission sets.
+
+- **Single Sign-On (SSO) Integration**:
+  - SAML and OAuth support for enterprise authentication systems.
+  - Multi-factor authentication (MFA) options for enhanced security.
+
+- **User Activity Logging**:
+  - Detailed audit trails of user actions within the system.
+  - Exportable logs for compliance and security analysis.
+
+### Alerts and Notifications
+
+- **Customizable Alert System**:
+  - Set up alerts for various events (e.g., license expiration, low stock).
+  - Multiple notification channels including email, SMS, and in-app notifications.
+
+- **Escalation Procedures**:
+  - Define alert escalation paths for critical issues.
+  - Integration with incident management systems.
+
+- **Scheduled Reports**:
+  - Automate report generation and distribution on a set schedule.
+  - Customize report recipients based on content and urgency.
+
+### Compliance and Auditing
+
+- **Audit Trail**:
+  - Comprehensive logging of all asset-related activities.
+  - Tamper-evident logs for regulatory compliance.
+
+- **Compliance Reporting**:
+  - Pre-built reports for common compliance standards (e.g., GDPR, HIPAA).
+  - Custom report templates for organization-specific compliance needs.
+
+- **Data Retention Policies**:
+  - Configure data retention rules to comply with legal requirements.
+  - Automated data archiving and deletion processes.
+
+### Integration Capabilities
+
+- **RESTful API**:
+  - Comprehensive API for integration with other business systems.
+  - Detailed API documentation with interactive testing capabilities.
+
+- **Webhook Support**:
+  - Configure webhooks to push real-time updates to external systems.
+  - Customizable payload formats for seamless integration.
+
+- **Pre-built Integrations**:
+  - Out-of-the-box integrations with popular business tools (e.g., JIRA, Slack).
+  - Integration marketplace for community-contributed connectors.
+
+### Localization
+
+- **Multi-language Support**:
+  - Interface available in multiple languages.
+  - Easy addition of new language packs.
+
+- **Localized Reporting**:
+  - Generate reports in the user's preferred language.
+  - Support for locale-specific date, time, and number formats.
+
+### Mobile Access
+
+- **Mobile-Responsive Web Interface**:
+  - Access full functionality from any mobile device.
+  - Optimized layouts for smaller screens.
+
+- **Native Mobile Apps**:
+  - iOS and Android apps for on-the-go asset management.
+  - Barcode scanning and offline capabilities.
+
+### Software License Management
+
+- **License Tracking**:
+  - Monitor software installations and usage across the organization.
+  - Track various license types (perpetual, subscription, concurrent use).
+
+- **Compliance Checking**:
+  - Automated checks for license compliance.
+  - Alerts for over-deployment or upcoming renewals.
+
+- **Cost Optimization**:
+  - Identify unused or underutilized software licenses.
+  - Recommendations for license consolidation or reallocation.
+
+### Vendor Management
+
+- **Vendor Database**:
+  - Centralized repository for vendor information.
+  - Link assets, contracts, and support information to specific vendors.
+
+- **Contract Management**:
+  - Store and manage vendor contracts and SLAs.
+  - Automated reminders for contract renewals and expirations.
+
+- **Vendor Performance Tracking**:
+  - Log and analyze vendor performance metrics.
+  - Generate vendor scorecards for performance reviews.
+
+### Financial Management
+
+- **Cost Tracking**:
+  - Monitor all costs associated with asset ownership.
+  - Break down costs by department, project, or cost center.
+
+- **Budgeting Tools**:
+  - Create and manage IT budgets within the system.
+  - Compare actual spending against budgeted amounts.
+
+- **TCO Calculation**:
+  - Calculate and report on Total Cost of Ownership for assets.
+  - Factor in direct and indirect costs for accurate TCO analysis.
+
+### Customization
+
+- **Custom Fields**:
+  - Add organization-specific fields to any asset type.
+  - Configure field types, validation rules, and display properties.
+
+- **Workflow Customization**:
+  - Design custom workflows for asset-related processes.
+  - Visual workflow editor for ease of configuration.
+
+- **Theming**:
+  - Customize the look and feel of the interface.
+  - White-labeling options for managed service providers.
 
 ## Getting Started
 
@@ -68,30 +347,31 @@ Marmotte offers a rich set of features to streamline your IT asset management:
 Before installing Marmotte, ensure you have the following:
 
 - PHP 8.3 or higher
-- Composer
-- Node.js and NPM
-- A supported database system (MySQL, PostgreSQL, or MariaDB)
-- Web server (Apache, Nginx, etc.)
+- Composer 2.0+
+- Node.js 14+ and NPM
+- A supported database system:
+  - MySQL 8.0+
+  - PostgreSQL 12+
+  - MariaDB 10.5+
+- Web server:
+  - Apache 2.4+ with mod_rewrite enabled
+  - Nginx 1.18+
+- SSL certificate (strongly recommended for production environments)
 
-For Docker-based installations, you'll need:
-
-- Docker
-- Docker Compose (for multi-container setups)
+For Docker-based installations:
+- Docker 20.10+
+- Docker Compose 1.29+ (for multi-container setups)
 
 ### Installation
 
 #### Running Marmotte with Docker
 
-Docker provides a quick and consistent way to deploy Marmotte. Here's how to get started using MariaDB:
-
-1. First, create a Docker network for Marmotte and MariaDB to communicate:
-
+1. Create a Docker network:
    ```bash
    docker network create marmotte-network
    ```
 
 2. Run a MariaDB container:
-
    ```bash
    docker run -d \
      --name marmotte-db \
@@ -104,8 +384,7 @@ Docker provides a quick and consistent way to deploy Marmotte. Here's how to get
      mariadb:latest
    ```
 
-3. Now, run the Marmotte container:
-
+3. Run the Marmotte container:
    ```bash
    docker run -d \
      --name marmotteio \
@@ -127,16 +406,12 @@ Docker provides a quick and consistent way to deploy Marmotte. Here's how to get
      marmotteio/marmotteio:latest
    ```
 
-4. Once the containers are running, access Marmotte at `http://localhost:8000`.
+4. Access Marmotte at `http://localhost:8000`.
 5. Log in with the default credentials:
    - Email: `admin@marmotte.io`
    - Password: `marmotte.io`
 
-For more advanced Docker usage, including viewing logs and managing containers, refer to our [Docker Guide](docs/docker-guide.md).
-
 #### Running Marmotte with Docker Compose
-
-For multi-container setups, Docker Compose offers a more flexible deployment option:
 
 1. Clone the Marmotte repository:
    ```bash
@@ -145,7 +420,6 @@ For multi-container setups, Docker Compose offers a more flexible deployment opt
    ```
 
 2. Create a `docker-compose.yml` file with the following content:
-
    ```yaml
    version: '3'
    services:
@@ -193,18 +467,17 @@ For multi-container setups, Docker Compose offers a more flexible deployment opt
 
 4. Access Marmotte at `http://localhost:8000`.
 
-For more detailed instructions and troubleshooting, see our [Docker Compose Guide](docs/docker-compose-guide.md).
-
 ### Configuration
 
-After installation, you may want to configure Marmotte to suit your needs:
+After installation, configure Marmotte to suit your needs:
 
-1. Environment Settings: Edit the `.env` file to configure your database connection, mail settings, and other environment-specific options.
-2. User Authentication: Set up your preferred authentication method (local, LDAP, SSO, etc.) in the admin panel.
+1. Environment Settings: Edit the `.env` file to configure database connection, mail settings, and other options.
+2. User Authentication: Set up your preferred authentication method in the admin panel.
 3. Customize Branding: Add your company logo and adjust color schemes in the settings.
 4. Set Up Integrations: Configure connections to other tools and services your organization uses.
-
-For detailed configuration options, refer to our [Configuration Guide](docs/configuration-guide.md).
+5. Define Asset Categories: Create custom asset categories and types that match your organization's structure.
+6. Configure Notifications: Set up email and in-app notification preferences.
+7. Set Up Reporting: Configure default reports and dashboards.
 
 ## Usage
 
@@ -215,124 +488,70 @@ Once Marmotte is set up, you can start managing your IT assets:
 3. Track Maintenance: Schedule and log maintenance activities for your assets.
 4. Generate Reports: Use the reporting feature to get insights into your asset utilization and status.
 5. Set Up Alerts: Configure notifications for important events like license renewals or end-of-life dates.
-
-For a comprehensive guide on using Marmotte, check out our [User Manual](docs/user-manual.md).
+6. Manage Software Licenses: Track software installations and usage across your organization.
+7. Conduct Audits: Perform regular audits of your IT assets.
+8. Analyze Costs: Track asset-related expenses throughout their lifecycle.
+9. Manage Vendors: Maintain a database of vendors and their associated assets.
+10. Collaborate: Use built-in commenting and tagging features to facilitate team communication.
 
 ## Tech Stack
 
 Marmotte is built on a robust and modern tech stack:
 
-- **Backend:**
-  - [Laravel 10](https://laravel.com): A powerful PHP framework for web artisans.
-  - [PHP 8.3](https://www.php.net): The latest version of PHP for improved performance and features.
-
-- **Frontend:**
-  - [Livewire](https://laravel-livewire.com): For dynamic, reactive interfaces.
-  - [Alpine.js](https://alpinejs.dev): A lightweight JavaScript framework for composing behavior directly in your markup.
-
-- **Database:**
-  - Support for MariaDB, MySQL, and PostgreSQL.
-
-- **Caching:**
-  - [Redis](https://redis.io): For high-performance caching and session management.
-
-- **Search:**
-  - [Meilisearch](https://www.meilisearch.com): A lightning-fast search engine that integrates seamlessly with Laravel.
-
-For a complete list of dependencies and their versions, refer to our `composer.json` and `package.json` files.
+- **Backend:** Laravel 10, PHP 8.3, Filament
+- **Frontend:** Livewire, Alpine.js, Tailwind CSS
+- **Database:** MariaDB, MySQL, PostgreSQL
+- **Caching:** Redis
+- **Search:** Meilisearch
+- **API:** Laravel Sanctum, Laravel OpenAPI
+- **Authentication:** Laravel Socialite
+- **Charting:** ApexCharts
+- **QR Code Generation:** SimpleSoftwareIO QrCode
+- **Multi-tenancy:** stancl/tenancy
+- **Error Tracking:** Sentry
 
 ## Database Compatibility
 
-Marmotte supports multiple database systems to accommodate various deployment scenarios:
+Marmotte supports multiple database systems:
 
-- **MariaDB:** A community-developed fork of MySQL, offering enhanced performance and features.
-- **MySQL:** Perfect for most production environments, offering a balance of features and performance.
-- **PostgreSQL:** Suitable for large-scale deployments or when advanced data types and query capabilities are needed.
-
-To switch between database systems, update your `.env` file with the appropriate connection details.
+- MariaDB 10.5+
+- MySQL 8.0+
+- PostgreSQL 12+
 
 ## API Documentation
 
-Marmotte provides a comprehensive API for integrating with other systems and automating asset management tasks. Our API documentation covers:
-
-- Authentication
-- Endpoints for CRUD operations on assets, users, and other entities
-- Reporting endpoints
-- Webhook configurations
-
-Access our full API documentation [here](docs/api-documentation.md).
+Marmotte provides a comprehensive API for integrating with other systems. Our API documentation covers authentication, CRUD operations, reporting endpoints, and webhook configurations.
 
 ## Customization and Extensibility
 
-Marmotte is designed to be highly customizable and extensible:
-
-- **Custom Fields:** Add custom fields to assets to track information specific to your organization.
-- **Plugins:** Extend Marmotte's functionality with our plugin system. [Learn more about developing plugins](docs/plugin-development-guide.md).
-- **Theming:** Customize the look and feel of Marmotte with our theming system. [Theming Guide](docs/theming-guide.md).
-- **Localization:** Contribute translations to make Marmotte available in more languages. [Translation Guide](docs/translation-guide.md).
+- **Custom Fields:** Add custom fields to assets to track organization-specific information.
+- **Plugins:** Extend Marmotte's functionality with our plugin system.
+- **Theming:** Customize the look and feel of Marmotte with our theming system.
+- **Localization:** Contribute translations to make Marmotte available in more languages.
 
 ## Frequently Asked Questions
 
-### General
-
-**Q: Is Marmotte really free?**
-A: Yes, Marmotte is an open-source project and is free to use. However, we also offer paid support and additional features for our paying customers.
-
-**Q: What technologies does Marmotte use?**
-A: Marmotte is built with Laravel, PHP, Redis, and Meilisearch. You can find more details in the [Tech Stack](#tech-stack) section.
-
-### Features and Support
-
-**Q: I have a feature request. How can I suggest it?**
-A: We welcome feature requests! You can suggest new features by opening an issue on our [GitHub repository](https://github.com/marmotteio/marmotteio/issues). Please ensure that the feature hasn't been requested already before creating a new issue.
-
-**Q: I need help with Marmotte. Where can I ask questions?**
-A: We have a few ways you can get help. Check out our [documentation](https://docs.marmotte.io), join our [Discord community](https://discord.gg/CmfnnkUx), or open an issue on our GitHub repository. If you're a paying customer, you can contact us directly at `hello@marmotte.io`.
-
-**Q: What kind of support do you provide for paying customers?**
-A: Paying customers have direct access to our support team at `hello@marmotte.io`. They also have access to premium features not available in the free version.
-
-### Bugs and Contributions
-
-**Q: I found a bug. Where can I report it?**
-A: You can report bugs by opening an issue on our [GitHub repository](https://github.com/marmotteio/marmotteio/issues). Please ensure that the bug hasn't been reported already before creating a new issue.
-
-**Q: I want to contribute to Marmotte. How can I do that?**
-A: We welcome all contributions! You can read our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
-
-**Q: How can I stay updated about new releases and changes?**
-A: You can keep track of updates by following our [GitHub repository](https://github.com/marmotteio/marmotteio). We also publish updates in our [Discord community](https://discord.gg/CmfnnkUx).
+For a list of frequently asked questions, please refer to our [FAQ page](https://marmotte.io/faq).
 
 ## Troubleshooting
 
-If you're experiencing issues with Marmotte, please check our [TROUBLESHOOTING.md](TROUBLESHOOTING.md) file for solutions to common problems. If your issue isn't covered there, you can:
-
-- Search for your issue in our [GitHub repository's issues](https://github.com/marmotteio/marmotteio/issues).
-- Join our [Discord community](https://discord.gg/CmfnnkUx) for community support.
-- Contact us directly at `hello@marmotte.io` if you're a paying customer.
+If you're experiencing issues, check our [TROUBLESHOOTING.md](TROUBLESHOOTING.md) file for solutions to common problems.
 
 ## Roadmap
 
-We are constantly working to improve Marmotte and expand its capabilities. Here are some features we plan to implement in the future:
-
-- Enhanced Asset Lifecycle Management
-- Advanced Reporting and Analytics
-- Integration with popular cloud services
-- Mobile app for on-the-go asset management
-
-For a detailed roadmap, please refer to our [ROADMAP.md](ROADMAP.md) file.
+For a detailed roadmap of future features and improvements, please refer to our [ROADMAP.md](ROADMAP.md) file.
 
 ## Contributing
 
-We welcome contributions to Marmotte! Whether it's improving documentation, reporting bugs, or writing code, we appreciate all forms of help. Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+We welcome contributions to Marmotte! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## Security
 
-We take security seriously. If you discover a security vulnerability within Marmotte, please send an email to `hello@marmotte.io`. All security vulnerabilities will be promptly addressed. Please refer to our [SECURITY.md](SECURITY.md) file for more details on our security policy.
+If you discover a security vulnerability, please send an email to `hello@marmotte.io`. All security vulnerabilities will be promptly addressed.
 
 ## Support
 
-For support options, please see the [Support](#support) section above. Remember, the more details you provide about your problem, the easier it will be for us to help you.
+For support options, please see the [Support](#support) section in our full documentation.
 
 ## Authors
 
@@ -340,51 +559,23 @@ Marmotte is maintained by a dedicated team of developers. See the list of contri
 
 ## License
 
-Marmotte is open-source software licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.en.html). This license permits you to use, modify, and distribute the project, but with the critical requirement that source code of any modifications or derivative works MUST BE PROVIDED to the recipients under the same license.
-
-Key points of the AGPL-3.0 license:
-
-- You can use Marmotte for any purpose, including commercial use.
-- You can modify Marmotte to suit your needs.
-- If you distribute Marmotte or any derivative works, you must do so under the AGPL-3.0 license.
-- If you run a modified version of Marmotte on a server and allow users to interact with it over a network, you must make the source code of your modified version available to those users.
-
-For full details, please refer to the [LICENSE](LICENSE) file in this repository or the [official text of the GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.en.html).
+Marmotte is open-source software licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
 ## Acknowledgments
 
-We would like to express our gratitude to:
-
-- All contributors who have helped build and improve Marmotte
-- The Laravel community for providing an excellent framework
-- Our users for their valuable feedback and support
-
-Special thanks to the following open-source projects that Marmotte relies on:
-
-- [Laravel](https://laravel.com)
-- [Livewire](https://laravel-livewire.com)
-- [Alpine.js](https://alpinejs.dev)
-- [MariaDB](https://mariadb.org)
-- [Redis](https://redis.io)
-- [Meilisearch](https://www.meilisearch.com)
+We would like to express our gratitude to all contributors and open-source projects that Marmotte relies on.
 
 ## Community and Resources
 
-Join our vibrant community to get the most out of Marmotte:
-
-- **Documentation:** Comprehensive guides and API references are available at [docs.marmotte.io](https://docs.marmotte.io)
-- **Discord Community:** Join our [Discord server](https://discord.gg/CmfnnkUx) for real-time discussions, support, and networking with other Marmotte users.
-- **Blog:** Stay updated with the latest features, best practices, and community highlights on our [blog](https://blog.marmotte.io).
-- **Twitter:** Follow us [@MarmotteIO](https://twitter.com/MarmotteIO) for announcements and tips.
-- **YouTube:** Check out our [YouTube channel](https://youtube.com/MarmotteIO) for tutorials and feature demonstrations.
+- **Documentation:** [docs.marmotte.io](https://docs.marmotte.io)
+- **Discord Community:** [Join our Discord](https://discord.gg/CmfnnkUx)
+- **Blog:** [blog.marmotte.io](https://blog.marmotte.io)
+- **Twitter:** [@MarmotteIO](https://twitter.com/MarmotteIO)
+- **YouTube:** [Marmotte YouTube Channel](https://youtube.com/MarmotteIO)
 
 ## Sponsors
 
-Marmotte is supported by these amazing companies:
-
-[Sponsor logos and links would go here]
-
-Interested in sponsoring Marmotte? Check out our [sponsorship page](https://marmotte.io/sponsor) for more information.
+[Sponsor information would go here]
 
 ## Changelog
 
@@ -392,21 +583,21 @@ For a detailed changelog of Marmotte releases, please refer to our [CHANGELOG.md
 
 ## Upgrading
 
-When upgrading to a new version of Marmotte, please refer to our [UPGRADING.md](UPGRADING.md) file for version-specific instructions and potential breaking changes.
+When upgrading to a new version of Marmotte, please refer to our [UPGRADING.md](UPGRADING.md) file for version-specific instructions.
 
 ## Benchmarks
 
-For performance benchmarks and comparisons with other IT asset management solutions, see our [benchmarks page](https://marmotte.io/benchmarks).
+For performance benchmarks, see our [benchmarks page](https://marmotte.io/benchmarks).
 
 ## Code of Conduct
 
-We are committed to fostering an open and welcoming environment in the Marmotte community. Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the behavior we expect from all community members.
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the behavior we expect from all community members.
 
 ## Final Notes
 
-Thank you for choosing Marmotte for your IT asset management needs. We're excited to see how you use it and look forward to your contributions to make it even better!
+Thank you for choosing Marmotte for your IT asset management needs. We're excited to see how you use it and look forward to your contributions!
 
-For more information on Marmotte, please visit our [website](https://marmotte.io).
+For more information, visit [marmotte.io](https://marmotte.io).
 
 ---
 
